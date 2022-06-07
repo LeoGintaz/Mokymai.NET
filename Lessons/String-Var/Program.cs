@@ -17,6 +17,10 @@
             string kompozicija = string.Format("{0}", kintamasis);
             string interpoliacija = $"{laisvas}";
 
+            int skaicius = 5;
+
+
+
             kintamasis = "tekstas belekoks"; // override of "kintamasis" 
 
         }
