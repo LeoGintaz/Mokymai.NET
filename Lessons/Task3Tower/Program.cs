@@ -13,7 +13,6 @@
             string four = "    ***|***    ";
             string five = "   ****|****   ";
             string bottom = "-------";
-            string extra = "";
             //  Console.Write(one + Environment.NewLine + two + Environment.NewLine + three + Environment.NewLine + four + Environment.NewLine + five + Environment.NewLine + bottom + "1" + bottom);
 
 
@@ -22,6 +21,22 @@
             
 
             Console.Write($"\n\n\n{five}{one}{one}\n{four}{one}{one}\n{three}{one}{one}\n{two}{one}{one}\n{one}{one}{one}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+
+
+            var all = two = three = four = five = one;
+            Console.Write($"\n\n\n{five}{one}{one}\n{four}{one}{one}\n{three}{one}{one}\n{two}{one}{one}\n{one}{one}{one}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+
+            one = "       |       ";
+            two = "      *|*      ";
+            three = "     **|**     ";
+            four = "    ***|***    ";
+            five = "   ****|****   ";
+            bottom = "-------";
+
+            Console.Write($"\n\n\n{five}{one}{one}\n{four}{one}{one}\n{three}{one}{one}\n{two}{one}{one}\n{one}{one}{one}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+         
+
+
         }
     }
 }
