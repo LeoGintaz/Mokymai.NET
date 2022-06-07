@@ -7,65 +7,67 @@
             Console.WriteLine("Hello, World!");
 
  
-            string one = "       |       ";
-            string two = "      *|*      ";
-            string three = "     **|**     ";
-            string four = "    ***|***    ";
-            string five = "   ****|****   ";
+            string zero = "       |       ";
+            string one = "      *|*      ";
+            string two = "     **|**     ";
+            string three = "    ***|***    ";
+            string four = "   ****|****   ";
             string bottom = "-------";
             //  Console.Write(one + Environment.NewLine + two + Environment.NewLine + three + Environment.NewLine + four + Environment.NewLine + five + Environment.NewLine + bottom + "1" + bottom); Testas Grazaus boksto
 
 
-            Console.Write($"{one}{one}{one}\n{two}{one}{one}\n{three}{one}{one}\n{four}{one}{one}\n{five}{one}{one}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+            Console.Write($"{zero}{zero}{zero}\n{one}{zero}{zero}\n{two}{zero}{zero}\n{three}{zero}{zero}\n{four}{zero}{zero}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
             
 
-            Console.Write($"\n\n\n{five}{one}{one}\n{four}{one}{one}\n{three}{one}{one}\n{two}{one}{one}\n{one}{one}{one}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+            Console.Write($"\n\n\n{four}{zero}{zero}\n{three}{zero}{zero}\n{two}{zero}{zero}\n{one}{zero}{zero}\n{zero}{zero}{zero}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
 
-            var all = two = three = four = five = one;
-            Console.Write($"\n\n\n{five}{one}{one}\n{four}{one}{one}\n{three}{one}{one}\n{two}{one}{one}\n{one}{one}{one}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+            var all = one = two = three = four = zero;
+            Console.Write($"\n\n\n{four}{zero}{zero}\n{three}{zero}{zero}\n{two}{zero}{zero}\n{one}{zero}{zero}\n{zero}{zero}{zero}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
-            one = "       |       ";
-            two = "      *|*      ";
-            three = "     **|**     ";
-            four = "    ***|***    ";
-            five = "   ****|****   ";
+            zero = "       |       ";
+            one = "      *|*      ";
+            two = "     **|**     ";
+            three = "    ***|***    ";
+            four = "   ****|****   ";
             bottom = "-------";
 
-            Console.Write($"\n\n\n{one}{one}{one}\n{one}{one}{one}\n{one}{one}{one}\n{one}{one}{one}\n{five}{five}{five}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+            Console.Write($"\n\n\n{zero}{zero}{zero}\n{zero}{zero}{zero}\n{zero}{zero}{zero}\n{zero}{zero}{zero}\n{four}{four}{four}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
             Console.Write($"\n\n\n" +
-                $"{one}{one}{one}" +
-                $"\n{one}{one}{one}" +
-                $"\n{one}{one}{one}" +
-                $"\n{one}{one}{two}" +
-                $"\n{five}{four}{three}" +
+                $"{zero}{zero}{zero}" +
+                $"\n{zero}{zero}{zero}" +
+                $"\n{zero}{zero}{zero}" +
+                $"\n{zero}{zero}{one}" +
+                $"\n{four}{three}{two}" +
                 $"\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
             Console.Write($"\n\n\n" +
-                $"{one}{one}{one}" +
-                $"\n{one}{one}{one}" +
-                $"\n{one}{one}{one}" +
-                $"\n{two}{one}{two}" +
-                $"\n{five}{four}{three}" +
+                $"{zero}{zero}{zero}" +
+                $"\n{zero}{zero}{zero}" +
+                $"\n{zero}{zero}{zero}" +
+                $"\n{one}{zero}{one}" +
+                $"\n{four}{three}{two}" +
                 $"\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
             Console.Write($"\n\n\n" +
-                $"{one}{three}{one}" +
-                $"\n{one}{three}{one}" +
-                $"\n{one}{three}{one}" +
-                $"\n{two}{three}{two}" +
-                $"\n{five}{three}{three}" +
+                $"{zero}{two}{zero}" +
+                $"\n{zero}{two}{zero}" +
+                $"\n{zero}{two}{zero}" +
+                $"\n{one}{two}{one}" +
+                $"\n{four}{two}{two}" +
                 $"\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
             Console.Write($"\n\n\n" +
-                $"{one}{one}{one}" +
-                $"\n{one}{one}{two}" +
-                $"\n{one}{one}{three}" +
-                $"\n{one}{one}{four}" +
-                $"\n{one}{one}{five}" +
+                $"{zero}{zero}{zero}" +
+                $"\n{zero}{zero}{one}" +
+                $"\n{zero}{zero}{two}" +
+                $"\n{zero}{zero}{three}" +
+                $"\n{zero}{zero}{four}" +
                 $"\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
+
+           
 
         }
     }
