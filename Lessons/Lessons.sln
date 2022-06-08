@@ -5,11 +5,13 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1", "Task1\Task1.csproj", "{550C5387-855A-4079-B31E-B6277DD4F107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Task2\Task2.csproj", "{A1C8BA88-4D58-4967-B104-EF6C5941098F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2", "Task2\Task2.csproj", "{A1C8BA88-4D58-4967-B104-EF6C5941098F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String-Var", "String-Var\String-Var.csproj", "{62357516-8ECF-4243-B8C1-73A8495B7007}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "String-Var", "String-Var\String-Var.csproj", "{62357516-8ECF-4243-B8C1-73A8495B7007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3Tower", "Task3Tower\Task3Tower.csproj", "{5DA6E6AA-4DB2-4E4C-8BFB-0AAEBECB1BED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3Tower", "Task3Tower\Task3Tower.csproj", "{5DA6E6AA-4DB2-4E4C-8BFB-0AAEBECB1BED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson", "Lesson\Lesson.csproj", "{FDD2E27C-50EF-4FCE-B6FE-3503477204CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5DA6E6AA-4DB2-4E4C-8BFB-0AAEBECB1BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DA6E6AA-4DB2-4E4C-8BFB-0AAEBECB1BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DA6E6AA-4DB2-4E4C-8BFB-0AAEBECB1BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD2E27C-50EF-4FCE-B6FE-3503477204CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD2E27C-50EF-4FCE-B6FE-3503477204CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD2E27C-50EF-4FCE-B6FE-3503477204CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD2E27C-50EF-4FCE-B6FE-3503477204CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
