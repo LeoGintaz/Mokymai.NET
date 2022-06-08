@@ -16,6 +16,18 @@
             Console.WriteLine("Šiandienos laikas " + siandiena );
             Console.WriteLine("skirtumas : " + skirtumas);
 
+            Console.WriteLine("-----------------");
+
+            string tekstas = "tekstas";
+            int skaicius = 11;
+            bool bulijonas = true;
+            
+            Console.WriteLine(tekstas + skaicius + bulijonas);
+
+            Console.WriteLine({0, 1, 2}tekstas,skaicius,bulijonas);
+
+            Console.WriteLine(tekstas, skaicius, bulijonas);
+
 
 
 
