@@ -70,7 +70,19 @@
                 $"\n{zero}{zero}{four}" +
                 $"\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
-           
+
+            one = one.Replace("*", "\"");
+            two = two.Replace("*", "\"");
+            three = three.Replace("*", "\"");
+            four = four.Replace("*", "\"");
+
+            Console.Write($"\n\n\n" +
+              $"{zero}{zero}{zero}" +
+              $"\n{zero}{zero}{one}" +
+              $"\n{zero}{zero}{two}" +
+              $"\n{zero}{zero}{three}" +
+              $"\n{zero}{zero}{four}" +
+              $"\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
 
 
