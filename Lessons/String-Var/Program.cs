@@ -43,9 +43,12 @@
 
 
             //budai skaiciu var. priskirti null
+            int? skaiciusNull = null;
+
             int? skaiciusKurisGaliButNull;
             skaiciusKurisGaliButNull = null;
-            Nullable<int> skaiciussKurisGaliButNull = null;
+
+            Nullable<int> skaiciussKurisGaliButNull2 = null;
             
             
             uint tikTeigiamasSkaicius = 2; //tik teigiami skaiciai max dvigubas lyginant su int/ushot/ulong
