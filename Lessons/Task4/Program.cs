@@ -9,6 +9,15 @@
             Console.WriteLine(tuple);
 
 
+            var pradzia = new DateTime(2022, 05, 30);
+            var siandiena = DateTime.Now;
+            var skirtumas = pradzia - siandiena;
+            Console.WriteLine("studiju pradžia " + pradzia);
+            Console.WriteLine("Šiandienos laikas " + siandiena );
+            Console.WriteLine("skirtumas" + skirtumas);
+
+
+
 
             }
         }
