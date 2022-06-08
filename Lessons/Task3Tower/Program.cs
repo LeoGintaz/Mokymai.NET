@@ -15,17 +15,20 @@
             string bottom = "-------";
             //  Console.Write(one + Environment.NewLine + two + Environment.NewLine + three + Environment.NewLine + four + Environment.NewLine + five + Environment.NewLine + bottom + "1" + bottom); Testas Grazaus boksto
 
-
+            //Pirma išvestis
             Console.Write($"{zero}{zero}{zero}\n{one}{zero}{zero}\n{two}{zero}{zero}\n{three}{zero}{zero}\n{four}{zero}{zero}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
             
-
+            //Antroji išvestis
             Console.Write($"\n\n\n{four}{zero}{zero}\n{three}{zero}{zero}\n{two}{zero}{zero}\n{one}{zero}{zero}\n{zero}{zero}{zero}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
-
+            //visų var. sulyginimas tusčiam , kad būtų galima pakartoti koda , jo nekeičiant ir gauti norimą rezultatą
             var all = one = two = three = four = zero;
+           
+            //trečia išvestis
             Console.Write($"\n\n\n{four}{zero}{zero}\n{three}{zero}{zero}\n{two}{zero}{zero}\n{one}{zero}{zero}\n{zero}{zero}{zero}\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
-
+           
+            //var. atstatyumas
             zero = "       |       ";
             one = "      *|*      ";
             two = "     **|**     ";
@@ -68,6 +71,9 @@
                 $"\n{bottom}{"1"}{bottom}{bottom}{"2"}{bottom}{bottom}{"3"}{bottom}");
 
            
+
+
+
 
         }
     }
