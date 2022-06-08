@@ -17,7 +17,9 @@
             string kompozicija = string.Format("{0}", kintamasis);
             string interpoliacija = $"{laisvas}";
 
-            int skaicius = 5;
+            int skaicius = 5;//solid number
+            decimal skaiciuss = 5.5m; //skaicius su kableliu
+            
 
 
 
