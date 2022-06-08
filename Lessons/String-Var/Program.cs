@@ -64,7 +64,19 @@
             //galimi dideliu skaiciu rasymo budai
             double didelis = 6.022e23; // 6.022x10^23.
             double atskyrimas = 522_1_00.00_001; //Atskirimas del lengvesnio skaitomumo
+            // double? nullable = null;
 
+            //loginiai , boolions
+            bool teisybe = true;
+            bool netiesa = false;
+            bool? nullable = null;
+
+
+            //string tekstiniai
+
+            char raide = 'a'; //viengubos kabutes(atiduoda skaitmeni . Raides ASCII)
+            
+            
 
         }
     }
