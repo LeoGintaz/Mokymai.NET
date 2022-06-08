@@ -11,10 +11,10 @@
 
             var pradzia = new DateTime(2022, 05, 30);
             var siandiena = DateTime.Now;
-            var skirtumas = pradzia - siandiena;
+            var skirtumas = siandiena - pradzia;
             Console.WriteLine("studiju pradžia " + pradzia);
             Console.WriteLine("Šiandienos laikas " + siandiena );
-            Console.WriteLine("skirtumas" + skirtumas);
+            Console.WriteLine("skirtumas : " + skirtumas);
 
 
 
