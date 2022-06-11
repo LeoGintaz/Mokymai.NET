@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Tower of Hanoi\n\n");
 
             
             string? zero = "       |       ";
