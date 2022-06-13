@@ -17,6 +17,16 @@
             Console.WriteLine($"daugyba {sk1 * sk2} \ndalyba {dalyba}");
 
 
+            Console.WriteLine("1sk");
+            sk1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("2sk");
+            sk2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("2sk");
+            double sk3 = double.Parse(Console.ReadLine());
+            double vid = 3;
+
+            Console.WriteLine($"{(sk1 +sk2 + sk3) / vid}");
+
 
 
 
