@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "String-Var", "String-Var\St
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3Tower", "Task3Tower\Task3Tower.csproj", "{5DA6E6AA-4DB2-4E4C-8BFB-0AAEBECB1BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson", "Lesson\Lesson.csproj", "{FDD2E27C-50EF-4FCE-B6FE-3503477204CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson", "Lesson\Lesson.csproj", "{FDD2E27C-50EF-4FCE-B6FE-3503477204CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4", "Task4\Task4.csproj", "{47F13F2E-3B8D-4BB2-AFDA-0B985E11B75C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task4", "Task4\Task4.csproj", "{47F13F2E-3B8D-4BB2-AFDA-0B985E11B75C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "Task5\Task5.csproj", "{1F5865C0-CE1E-4F81-84D3-B0B9DA8C3BCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{47F13F2E-3B8D-4BB2-AFDA-0B985E11B75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47F13F2E-3B8D-4BB2-AFDA-0B985E11B75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F13F2E-3B8D-4BB2-AFDA-0B985E11B75C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5865C0-CE1E-4F81-84D3-B0B9DA8C3BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5865C0-CE1E-4F81-84D3-B0B9DA8C3BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5865C0-CE1E-4F81-84D3-B0B9DA8C3BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5865C0-CE1E-4F81-84D3-B0B9DA8C3BCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
