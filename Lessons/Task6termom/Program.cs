@@ -58,6 +58,7 @@ var cel30m = cel - 30;
 var cel35m = cel - 35;
 var cel40m = cel - 40;
 
+
 var far1 = cel5 * 9 / 5 + 32;
 var far2 = cel10 * 9 / 5 + 32;
 var far3 = cel15 * 9 / 5 + 32;
@@ -124,5 +125,8 @@ Console.WriteLine($"" +
     $"          |       (*****)      |\n" +
     $"          |        '---'       |\n" +
     $"          |____________________|");
+Console.ReadKey();
+
+
 
 
