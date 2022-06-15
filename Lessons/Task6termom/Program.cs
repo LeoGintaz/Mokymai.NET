@@ -1,6 +1,6 @@
 ﻿
 Console.WriteLine("Termometriniai Automobiliai\n\n\n");
-
+/*
 //1. Paprašykite naudotojo įvesti 1 skaičių - temperatūrą pagal Celsijų.
 
 Console.WriteLine("Įvesskite temp. celcijumi: ");
@@ -40,7 +40,7 @@ Console.ReadKey();
      a) Atvaizduokite skalę, sugraduotą kas 5 laipsnius C priklausomai nuo įvestos temperatūros pridedant ir atimant 40 laipsnių 
        (tarkime įvesta buvo 10, tuomet skalė bus nuo -30 iki +50)
      b) Grafiškai atvaizduokite įvestą temperatūros stulpelį. */
-
+/*
 var cel5 = cel + 5;
 var cel10 = cel + 10;
 var cel15 = cel + 15;
@@ -100,6 +100,7 @@ var far8m = cel40m * 9 / 5 + 32;
     $"          |       (*****)      |" +
     $"          |        '---'       |" +
     $"          |____________________|" );       */
+/*
 
 Console.WriteLine($"" +
     $"          |--------------------|\n" +
@@ -125,7 +126,72 @@ Console.WriteLine($"" +
     $"          |       (*****)      |\n" +
     $"          |        '---'       |\n" +
     $"          |____________________|");
-Console.ReadKey();
+Console.ReadKey(); */
+
+Console.WriteLine("Enter km from point A to B"); //veikia puikiai su 200km , virs isdarko vaizda stipriai.
+var AtoB = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter speed of car A in km/h");
+var carA = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter speed of car B in km/h");
+var carB = int.Parse(Console.ReadLine());
+var C = carA + carB;
+decimal laikas = (C/C) + (AtoB/C);
+Console.WriteLine(laikas);
+decimal meet = carA * laikas;
+Console.WriteLine(meet);
+
+Console.WriteLine($" cars will meet at {meet * 1000} meeters from point A. after {laikas * 60 *60}s from start");
+decimal carAfin = AtoB / carA; 
+decimal carBfin= AtoB / carB;
+Console.WriteLine($"car a will finish route in {carAfin *60}min. and CarB will finish route in {carBfin *60}minutes");
+Console.WriteLine($" total emitions from both cars at meet point {200 * 95 } emissions from car A {meet * 95}. Emissions from car B {(200 - meet) * 95}");
+
+var segment = AtoB / 20;
+var seg = Convert.ToString(segment);
+
+
+seg = seg.Replace(seg, $"km");
+
+Console.WriteLine($"" +
+    $"|{seg, 4}|{seg, 4}|{seg,4}|{seg, 4}|{seg, 4}|{seg, 4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|");
+
+seg = seg.Replace("km", $"{segment}");
+
+Console.WriteLine($"" +
+    $"|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|{seg,4}|");
+
+seg = seg.Replace($"{segment}", "----");
+
+
+Console.WriteLine($"" +
+    $"|{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}{AtoB}km-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}|");
+int xx = Convert.ToInt32(meet);
+string susitikimas = new String('-', xx/10*5-1);
+string susitikimas2 = new String('>', (AtoB - xx) / 10 * 5-1);
+Console.WriteLine($"|{susitikimas}x Cars will meet here at {meet} km.");
+
+int CarAT = AtoB / carA * 60;
+int CarBT = AtoB / carB * 60;
+
+/*seg = seg.Replace("-", ">");
+
+Console.WriteLine($"" +
+    $"{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{CarAT}min{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}A");*/
+susitikimas = susitikimas.Replace("-", ">");
+Console.WriteLine($"|{susitikimas}{CarAT}min{susitikimas2} CarA total time");
+
+susitikimas = susitikimas.Replace(">", "<");
+susitikimas2 = susitikimas2.Replace(">", "<");
+
+Console.WriteLine($"|{susitikimas2}{CarBT}min{susitikimas} CarB total time");
+
+
+/*seg = seg.Replace(">", "<");
+
+Console.WriteLine($"" +
+    $"{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{CarBT}min{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}B");*/
+
+
 
 
 
