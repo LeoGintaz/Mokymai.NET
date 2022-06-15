@@ -128,7 +128,7 @@ Console.WriteLine($"" +
     $"          |____________________|");
 Console.ReadKey(); */
 
-Console.WriteLine("Enter km from point A to B"); //veikia puikiai su 200km , virs isdarko vaizda stipriai.
+Console.WriteLine("Enter km from point A to B"); 
 var AtoB = int.Parse(Console.ReadLine());
 Console.WriteLine("Enter speed of car A in km/h");
 var carA = int.Parse(Console.ReadLine());
@@ -167,23 +167,27 @@ Console.WriteLine($"" +
     $"|{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}{AtoB}km-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}-{seg,4}|");
 int xx = Convert.ToInt32(meet);
 string susitikimas = new String('-', xx/10*5-1);
-string susitikimas2 = new String('>', (AtoB - xx) / 10 * 5-1);
+string susitikimas2 = new String('-', (AtoB - xx) / 10 * 5-1);
 Console.WriteLine($"|{susitikimas}x Cars will meet here at {meet} km.");
+
 
 int CarAT = AtoB / carA * 60;
 int CarBT = AtoB / carB * 60;
-
+string plus = $"CarA{susitikimas}>>>{CarAT}min";
+Console.WriteLine($"|{plus, -99}|");
+string plus2 = $"{CarBT}min.<<<{susitikimas2}CarB";
+Console.WriteLine($"|{plus2, 99}|");
 /*seg = seg.Replace("-", ">");
 
 Console.WriteLine($"" +
     $"{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{CarAT}min{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}{seg}A");*/
-susitikimas = susitikimas.Replace("-", ">");
-Console.WriteLine($"|{susitikimas}{CarAT}min{susitikimas2} CarA total time");
+//susitikimas = susitikimas.Replace("-", ">");
+//Console.WriteLine($"|{susitikimas}{CarAT}min{susitikimas2} CarA total time");
 
-susitikimas = susitikimas.Replace(">", "<");
-susitikimas2 = susitikimas2.Replace(">", "<");
+//susitikimas = susitikimas.Replace(">", "<");
+//susitikimas2 = susitikimas2.Replace(">", "<");
 
-Console.WriteLine($"|{susitikimas2}{CarBT}min{susitikimas} CarB total time");
+//Console.WriteLine($"|{susitikimas2}{CarBT}min{susitikimas} CarB total time");
 
 
 /*seg = seg.Replace(">", "<");
