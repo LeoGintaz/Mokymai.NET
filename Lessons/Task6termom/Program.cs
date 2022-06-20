@@ -1,6 +1,6 @@
 ﻿
 Console.WriteLine("Termometriniai Automobiliai\n\n\n");
-/*
+
 //1. Paprašykite naudotojo įvesti 1 skaičių - temperatūrą pagal Celsijų.
 
 Console.WriteLine("Įvesskite temp. celcijumi: ");
@@ -40,7 +40,7 @@ Console.ReadKey();
      a) Atvaizduokite skalę, sugraduotą kas 5 laipsnius C priklausomai nuo įvestos temperatūros pridedant ir atimant 40 laipsnių 
        (tarkime įvesta buvo 10, tuomet skalė bus nuo -30 iki +50)
      b) Grafiškai atvaizduokite įvestą temperatūros stulpelį. */
-/*
+
 var cel5 = cel + 5;
 var cel10 = cel + 10;
 var cel15 = cel + 15;
@@ -100,7 +100,7 @@ var far8m = cel40m * 9 / 5 + 32;
     $"          |       (*****)      |" +
     $"          |        '---'       |" +
     $"          |____________________|" );       */
-/*
+
 
 Console.WriteLine($"" +
     $"          |--------------------|\n" +
@@ -126,7 +126,7 @@ Console.WriteLine($"" +
     $"          |       (*****)      |\n" +
     $"          |        '---'       |\n" +
     $"          |____________________|");
-Console.ReadKey(); */
+Console.ReadKey(); 
 
 Console.WriteLine("Enter km from point A to B"); 
 var AtoB = int.Parse(Console.ReadLine());
