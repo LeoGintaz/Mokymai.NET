@@ -74,7 +74,8 @@ else Console.WriteLine("tai kamerinis");*/
 Console.WriteLine("iveskite isdirbtas valandas");
 int skaicius = Convert.ToInt32(Console.ReadLine());
 
-if (skaicius < 160) {
+if (skaicius < 160)
+{
     int truk = 160 - skaicius;
     Console.WriteLine("truksta" + truk);
 }
@@ -86,9 +87,9 @@ else if (skaicius > 160)
 }
 else if (skaicius == 160)
 {
-    
+
     Console.WriteLine("isdirbtas pilnas etatas");
 }
 
 
-else Console.WriteLine("negalimas skaicius")
+else Console.WriteLine("negalimas skaicius");
