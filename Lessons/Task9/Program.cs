@@ -91,7 +91,7 @@ switch (menuChoice) {
 }
 */
 
-
+/*
 Console.WriteLine("Atspėk skaičių!!!!");
 
 
@@ -150,11 +150,39 @@ if (spejimas == ats)
     Console.WriteLine("Atspėjote teisingai");
 else if (spejimas != ats)
     Console.WriteLine("Neatspėjote");
-else Console.WriteLine("Įvedėte netinkamą skaičių");
+else Console.WriteLine("Įvedėte netinkamą skaičių");*/
 
 
+Console.WriteLine("įveskite pirmą skaičių");
+int pirmasSk = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine("įveskite antrą skaičių");
+int antrasSk = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine("įveskite operatorių + , - , * arba /");
+var operatorius = Console.ReadLine();
+
+if (operatorius == "+")
+{
+    var pridet = pirmasSk + antrasSk;
+    Console.WriteLine(pridet);
+}
+else if (operatorius == "-")
+{
+    var atimt = pirmasSk - antrasSk;
+    Console.WriteLine(atimt);
+}
+else if (operatorius == "*")
+{
+    var daug = pirmasSk * antrasSk;
+    Console.WriteLine(daug);
+}
+else if (operatorius == "/")
+{
+    double dal = (double)pirmasSk / (double)antrasSk;
+    Console.WriteLine(dal);
+}
+else Console.WriteLine("Klaida");
 
 
 
