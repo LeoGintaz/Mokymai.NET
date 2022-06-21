@@ -36,7 +36,7 @@ var resultatas = menuChoice switch
 Console.WriteLine("------------");
 */
 
-Console.WriteLine("iveskite pazimi");
+/*Console.WriteLine("iveskite pazimi");
 int nr = Convert.ToInt32(Console.ReadLine());
 if (nr >=0 && nr < 5)
     Console.WriteLine("nepatenkinamai");
@@ -89,9 +89,72 @@ switch (menuChoice) {
     default: Console.WriteLine("toks pazimys neegzistuoja");
         break;
 }
+*/
 
-Console.WriteLine("iveskite pazimi");
-var sk = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Atspėk skaičių!!!!");
+
+
+int ats = 15;
+
+Console.WriteLine("\n\n\n Įveskite skaičių nuo 1 iki 20");
+int spejimas = Convert.ToInt32(Console.ReadLine());
+
+
+if (spejimas == ats)
+    Console.WriteLine("Atspėjote teisingai");
+else if (spejimas != ats && spejimas < ats)
+    Console.WriteLine("Atsakymas yra didesnis, bandykite dar kartą (liko 5 spėjimai)");
+else if (spejimas != ats && spejimas > ats)
+    Console.WriteLine("Atsakymas yra mazesnis , bandykite dar kartą (liko 5 spėjimai)");
+else Console.WriteLine("Įvedėte netinkamą skaičių");
+spejimas = Convert.ToInt32(Console.ReadLine());
+
+if (spejimas == ats)
+    Console.WriteLine("Atspėjote teisingai");
+else if (spejimas != ats && spejimas < ats)
+    Console.WriteLine("Atsakymas yra didesnis, bandykite dar kartą (liko 4 spėjimai)");
+else if (spejimas != ats && spejimas > ats)
+    Console.WriteLine("Atsakymas yra mazesnis , bandykite dar kartą (liko 4 spėjimai)");
+else Console.WriteLine("Įvedėte netinkamą skaičių");
+spejimas = Convert.ToInt32(Console.ReadLine());
+
+if (spejimas == ats)
+    Console.WriteLine("Atspėjote teisingai");
+else if (spejimas != ats && spejimas < ats)
+    Console.WriteLine("Atsakymas yra didesnis, bandykite dar kartą (liko 3 spėjimai)");
+else if (spejimas != ats && spejimas > ats)
+    Console.WriteLine("Atsakymas yra mazesnis , bandykite dar kartą (liko 3 spėjimai)");
+else Console.WriteLine("Įvedėte netinkamą skaičių");
+spejimas = Convert.ToInt32(Console.ReadLine());
+
+if (spejimas == ats)
+    Console.WriteLine("Atspėjote teisingai");
+else if (spejimas != ats && spejimas < ats)
+    Console.WriteLine("Atsakymas yra didesnis, bandykite dar kartą (liko 2 spėjimai)");
+else if (spejimas != ats && spejimas > ats)
+    Console.WriteLine("Atsakymas yra mazesnis , bandykite dar kartą (liko 2 spėjimai)");
+else Console.WriteLine("Įvedėte netinkamą skaičių");
+spejimas = Convert.ToInt32(Console.ReadLine());
+
+if (spejimas == ats)
+    Console.WriteLine("Atspėjote teisingai");
+else if (spejimas != ats && spejimas < ats)
+    Console.WriteLine("Atsakymas yra didesnis, bandykite dar kartą (liko 1 spėjimai)");
+else if (spejimas != ats && spejimas > ats)
+    Console.WriteLine("Atsakymas yra mazesnis , bandykite dar kartą (liko 1 spėjimai)");
+else Console.WriteLine("Įvedėte netinkamą skaičių");
+spejimas = Convert.ToInt32(Console.ReadLine());
+
+if (spejimas == ats)
+    Console.WriteLine("Atspėjote teisingai");
+else if (spejimas != ats)
+    Console.WriteLine("Neatspėjote");
+else Console.WriteLine("Įvedėte netinkamą skaičių");
+
+
+
+
 
 
 
