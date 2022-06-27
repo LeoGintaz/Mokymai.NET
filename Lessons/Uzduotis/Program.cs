@@ -12,7 +12,7 @@ if (ilgis != 11)
 string vyras = "Vyras";
 string moteris = "Moteris";
 var pirmas = aKodas.Remove(1,10);
-var pirmas2 = Convert.ToInt32(pirmas);
+
 if (pirmas == "1")
     Console.WriteLine(vyras);
 else if (pirmas == "3")
@@ -25,6 +25,24 @@ else if (pirmas == "4")
     Console.WriteLine(moteris);
 else if (pirmas == "6")
     Console.WriteLine(moteris);
+
+var dataIsAkodo = aKodas.Substring(1,6);
+dataIsAkodo = dataIsAkodo.Insert(2, "/");
+dataIsAkodo = dataIsAkodo.Insert(5, "/");
+Console.WriteLine("Įveskite savo amžių: ");
+var gimimoData = Console.ReadLine();
+    if (string.IsNullOrEmpty(gimimoData))
+    Console.WriteLine(dataIsAkodo);
+
+
+
+
+
+//Console.WriteLine("Įveskite gimimo metus: ");
+//var gimimoDdata = DateTime.Parse(Console.ReadLine());
+
+
+
 
 
 
