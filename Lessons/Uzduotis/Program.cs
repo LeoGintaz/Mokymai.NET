@@ -11,16 +11,21 @@ if (ilgis != 11)
     Console.WriteLine("neteisingai įvestas asmens kodas");
 string vyras = "Vyras";
 string moteris = "Moteris";
-var pirmas = aKodas[0];
+var pirmas = aKodas.Remove(1,10);
 var pirmas2 = Convert.ToInt32(pirmas);
-if  (pirmas2 == 49)
-    if (pirmas2 == 51)
-        if (pirmas2 == 53)
-            Console.WriteLine(vyras);
-else if (pirmas2 == 50)
-            if (pirmas2 == 52)
-                if (pirmas2 == 54)
-                    Console.WriteLine(moteris);
+if (pirmas == "1")
+    Console.WriteLine(vyras);
+else if (pirmas == "3")
+    Console.WriteLine(vyras);
+else if (pirmas == "5")
+    Console.WriteLine(vyras);
+if (pirmas == "2")
+    Console.WriteLine(moteris);
+else if (pirmas == "4")
+    Console.WriteLine(moteris);
+else if (pirmas == "6")
+    Console.WriteLine(moteris);
+
 
 
 
