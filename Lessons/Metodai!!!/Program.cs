@@ -10,12 +10,11 @@
             string vardas = Console.ReadLine();
             Vardenis(vardas);
             Vardenis2(vardas);*/
-            /*
+            
             Console.WriteLine("iveskite 2 skaicius");
             int sk1 = Convert.ToInt32(Console.ReadLine());
             int sk2 = Convert.ToInt32(Console.ReadLine());
-            bool sk1t = int.TryParse(sk1, out sk1);
-            Console.WriteLine($" suma {suma(sk1, sk2)}");*/
+            Console.WriteLine($" suma {suma(sk1, sk2)}");
 
 
             Console.WriteLine("iveskite sakini");

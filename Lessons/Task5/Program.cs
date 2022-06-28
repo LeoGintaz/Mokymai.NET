@@ -94,7 +94,8 @@
 
             Console.WriteLine($"{++x} {++x} {++x} {++x} {++x}");
             */
-            
+            var toDay = DateTime.Today.ToString("yy/MM/dd");
+            Console.WriteLine(toDay);
 
 
 

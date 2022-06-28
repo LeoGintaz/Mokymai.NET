@@ -27,12 +27,45 @@ else if (pirmas == "6")
     Console.WriteLine(moteris);
 
 var dataIsAkodo = aKodas.Substring(1,6);
-dataIsAkodo = dataIsAkodo.Insert(2, "/");
-dataIsAkodo = dataIsAkodo.Insert(5, "/");
-Console.WriteLine("Įveskite savo amžių: ");
-var gimimoData = Console.ReadLine();
-    if (string.IsNullOrEmpty(gimimoData))
+
+Console.WriteLine("Įveskite savo gimimo datą : ");
+Console.WriteLine("Metai : ");
+var year = Console.ReadLine();
+Console.WriteLine("menuo (skaiciumi) : ");
+var menuo = Console.ReadLine();
+Console.WriteLine("diena : ");
+var diena = Console.ReadLine();
+
+var gimimoData =; 
+if (string.IsNullOrEmpty(year) && string.IsNullOrEmpty(menuo) && string.IsNullOrEmpty(diena) == false)
+{
+    var yearAK = dataIsAkodo.Substring(0, 1);
+    var menuoAK = dataIsAkodo.Substring(2, 3);
+    var dienaAK = dataIsAkodo.Substring(4, 5);// isgryninimaas datos is AK i 3 atskirus string
+    // ----------------------------------------------------------------------------------------
+    var toDay = DateTime.Today.ToString("yy/MM/dd");
+    toDay = toDay.Replace("/", "");
+    var toDayY = toDay.Substring(0, 1);
+    var toDayM = toDay.Substring(2, 3);
+    var toDayD = toDay.Substring(4, 5);// datos isskaidymas i tris atskirus string
+    //-----------------------------------------------------------------------------------------
+    if (int.Parse(toDayY) - int.Parse(yearAK) == int.Parse(toDayY) - int.Parse(year)
+        && int.Parse(toDayM) - int.Parse(menuoAK) == int.Parse(toDayM) - int.Parse(menuo)
+        && int.Parse(toDayD) - int.Parse(dienaAK) == int.Parse(toDayD) - int.Parse(diena))
+        Console.WriteLine("amziuspatikimas");
+    else Console.WriteLine("amzius nepatikimas");
+
+
+
+
+}
+if (string.IsNullOrEmpty(year) && string.IsNullOrEmpty(menuo) && string.IsNullOrEmpty(diena))
+{
+    dataIsAkodo = dataIsAkodo.Insert(2, "/");
+    dataIsAkodo = dataIsAkodo.Insert(5, "/");
     Console.WriteLine(dataIsAkodo);
+}
+    
 
 
 
