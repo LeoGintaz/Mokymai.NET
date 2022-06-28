@@ -1,20 +1,28 @@
-﻿namespace Metodai___2
+﻿namespace Metodai2
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("metodai 2");
             Console.WriteLine("iveskite teksta");
             var tekstas = Console.ReadLine();
-            Console.WriteLine(TarpKiekis(tekstas));
-            Console.WriteLine(TarpKiekisprad(tekstas));
-            StarEndstring(tekstas);
+            Console.WriteLine(Tarpai(tekstas));
+            //Console.WriteLine(TarpKiekis(tekstas));
+            //Console.WriteLine(TarpKiekisprad(tekstas));
+            //StarEndstring(tekstas);
 
 
 
         }
+        public static int Tarpai(string tarpai)
+        {
+            string pakitimas = tarpai.Replace(" ", "");
+            var atimtis = tarpai.Length - pakitimas.Length;
+            return atimtis;
 
+        }
+ 
         public static int Word(string tarpai)
         {
             string[] split = tarpai.Split(' ');
@@ -39,7 +47,7 @@
             var kiekis2 = tekstas.Length - tekstas.TrimStart(' ').Length;
             return kiekis2;
 
-        }
+        }*/
 
 
         
