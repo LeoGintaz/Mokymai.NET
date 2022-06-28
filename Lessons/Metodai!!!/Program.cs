@@ -10,7 +10,7 @@
             string vardas = Console.ReadLine();
             Vardenis(vardas);
             Vardenis2(vardas);*/
-            
+          /*  
             Console.WriteLine("iveskite 2 skaicius");
             int sk1 = Convert.ToInt32(Console.ReadLine());
             int sk2 = Convert.ToInt32(Console.ReadLine());
@@ -20,7 +20,7 @@
             Console.WriteLine("iveskite sakini");
             var tarpai = Console.ReadLine();
             Console.Write(Tarpai(tarpai));
-            Console.Write(TekstoIlgis(tarpai));
+            Console.Write(TekstoIlgis(tarpai));*/
 
         }
 
@@ -61,8 +61,9 @@
         public static int TekstoIlgis(string tarpai)
         {
             string pakitimas = tarpai.Replace(" ", "");
+            var atmintis = patikrinimas
             var atimtis = pakitimas.Length;
-            return atimtis;
+            return atimtis;// su trim reikejo
         }
 
 
