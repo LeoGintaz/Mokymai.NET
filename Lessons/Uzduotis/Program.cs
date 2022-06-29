@@ -113,7 +113,7 @@ Console.WriteLine("Gimimo data");
 Console.WriteLine("Amžiaus patikrinimas");*/
 
 //Antras Bandymas
-
+/*
 Console.WriteLine("Užpildykite ankeetą\n\n");
 Console.WriteLine("Įveskite savo vardą: ");
 string name = Console.ReadLine();
@@ -170,4 +170,4 @@ switch (pasirinkimas)
         Console.WriteLine("ivesskite savo amziu");
         amzius = int.Parse(Console.ReadLine());
         break;
-}
+}*/

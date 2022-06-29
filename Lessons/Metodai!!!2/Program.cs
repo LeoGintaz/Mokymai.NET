@@ -12,11 +12,13 @@
               //Console.WriteLine(TarpKiekisprad(tekstas));
               //StarEndstring(tekstas);
             */
-            string tekstas = Console.ReadLine();
-            Console.WriteLine(Mokausi(tekstas));
+            //string tekstas = Console.ReadLine();
+            //Console.WriteLine(Mokausi(tekstas));
+            var kurA = Console.ReadLine();
+            Console.WriteLine(Aindex(kurA));
 
 
-          }/*
+        }/*
           public static int Tarpai(string tarpai)
           {
               string pakitimas = tarpai.Replace(" ", "");
@@ -61,7 +63,12 @@
             return tekstas;
 
         }
+        public static int Aindex(string tekstas)
+        {
+            int indeksas = tekstas.IndexOf("a");
+                return indeksas;
 
+        }
 
     }
 
