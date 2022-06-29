@@ -29,11 +29,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metodai", "Metodai\Metodai.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metodai!!!", "Metodai!!!\Metodai!!!.csproj", "{10076393-9711-41A6-BE37-CCDAD398ABA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metodai!!!2", "Metodai!!!2\Metodai!!!2.csproj", "{62648D69-CF0D-4D37-A326-678D456F3B92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metodai!!!2", "Metodai!!!2\Metodai!!!2.csproj", "{62648D69-CF0D-4D37-A326-678D456F3B92}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testai", "Testai", "{DA25A96C-D995-4C11-8273-70EF4B2E37BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMetodai", "TestMetodai\TestMetodai.csproj", "{2EDD78FE-FB67-4B87-9822-D41C6999FBBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMetodai", "TestMetodai\TestMetodai.csproj", "{2EDD78FE-FB67-4B87-9822-D41C6999FBBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UzduotisAntras varijantas", "UzduotisAntras varijantas\UzduotisAntras varijantas.csproj", "{336F3E5A-44C1-41F3-87BD-6C4527AA8488}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{2EDD78FE-FB67-4B87-9822-D41C6999FBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EDD78FE-FB67-4B87-9822-D41C6999FBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EDD78FE-FB67-4B87-9822-D41C6999FBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336F3E5A-44C1-41F3-87BD-6C4527AA8488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336F3E5A-44C1-41F3-87BD-6C4527AA8488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336F3E5A-44C1-41F3-87BD-6C4527AA8488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336F3E5A-44C1-41F3-87BD-6C4527AA8488}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

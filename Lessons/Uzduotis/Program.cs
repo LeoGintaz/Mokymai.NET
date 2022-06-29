@@ -1,4 +1,8 @@
 ﻿
+
+//Pirmas bandymass
+
+/*
 var data = (DateTime.Today.ToString("yy/MM/dd"));
 
 
@@ -106,4 +110,64 @@ Console.WriteLine("Asmens Kodas");
 
 Console.WriteLine("Amžius");
 Console.WriteLine("Gimimo data");
-Console.WriteLine("Amžiaus patikrinimas");
+Console.WriteLine("Amžiaus patikrinimas");*/
+
+//Antras Bandymas
+
+Console.WriteLine("Užpildykite ankeetą\n\n");
+Console.WriteLine("Įveskite savo vardą: ");
+string name = Console.ReadLine();
+Console.WriteLine("Įveskite saavo pavardę: ");
+string surname = Console.ReadLine();
+Console.WriteLine($"Įveskite asmens kodą : ");
+var aKodas = Console.ReadLine();
+int ilgis = aKodas.Length;
+if (ilgis != 11)
+    Console.WriteLine("neteisingai įvestas asmens kodas");
+string vyras = "Vyras";
+string moteris = "Moteris";
+var pirmas = aKodas.Remove(1, 10);
+
+if (pirmas == "1")
+    Console.WriteLine(vyras);
+else if (pirmas == "3")
+    Console.WriteLine(vyras);
+else if (pirmas == "5")
+    Console.WriteLine(vyras);
+if (pirmas == "2")
+    Console.WriteLine(moteris);
+else if (pirmas == "4")
+    Console.WriteLine(moteris);
+else if (pirmas == "6")
+    Console.WriteLine(moteris);
+
+var dataIsAK = DateTime.Parse(aKodas.Substring(1, 6));
+
+Console.WriteLine("Pasirinkite, kaip ivesite amziu : \n 1 -Amzius\n2 -Data \n3 -abu");
+
+var pasirinkimas = int.Parse(Console.ReadLine());
+
+switch (pasirinkimas)
+{
+    case 1:
+        Console.WriteLine("ivesskite savo amziu");
+        var amzius = int.Parse(Console.ReadLine());
+        var patikra = DateTime.Today - amzius;
+
+
+        break;
+    case 2:
+        Console.WriteLine("ivesskite savo gimimo data (YY\\MM\\DD)");
+        var data = int.Parse(Console.ReadLine());
+        var patikra2 = DateTime.Today - dataIsAK;
+
+
+        break;
+    case 3:
+        Console.WriteLine("ivesskite savo gimimo data (YY\\MM\\DD)");
+        data = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("ivesskite savo amziu");
+        amzius = int.Parse(Console.ReadLine());
+        break;
+}
