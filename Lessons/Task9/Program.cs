@@ -152,7 +152,7 @@ else if (spejimas != ats)
     Console.WriteLine("Neatspėjote");
 else Console.WriteLine("Įvedėte netinkamą skaičių");*/
 
-
+Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("įveskite pirmą skaičių");
 int pirmasSk = Convert.ToInt32(Console.ReadLine());
 
