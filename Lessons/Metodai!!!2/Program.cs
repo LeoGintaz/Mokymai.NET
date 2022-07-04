@@ -61,11 +61,12 @@
             bool kableliai2 = tekstas.Contains(",mokausi");
             bool klaustukas = tekstas.Contains("mokausi?");
             bool skliaustai = tekstas.Contains("(mokausi)");
+            bool sauktukas = tekstas.Contains("mokausi!");
 
-            bool mokausi = tarpai || kableliai1 || kableliai2 || klaustukas || skliaustai;
+            bool mokausi = tarpai || kableliai1 || kableliai2 || klaustukas || skliaustai || sauktukas;
             if (mokausi = true)
-                return "true";
-            else return "false";
+                return "taip";
+            else return "ne";
 
 
 
