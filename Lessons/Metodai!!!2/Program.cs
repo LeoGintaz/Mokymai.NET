@@ -15,7 +15,7 @@
             //string tekstas = Console.ReadLine();
             //Console.WriteLine(Mokausi(tekstas));
             var kurA = Console.ReadLine();
-            Console.WriteLine(Aindex(kurA));
+            Console.WriteLine(Mokausi(kurA));
 
 
         }/*
@@ -56,11 +56,20 @@
 
         public static string Mokausi(string tekstas)
         {
-            if (tekstas.Contains("mokausi"))
-                return "taip";
-            else return "ne";
+            bool tarpai = tekstas.Contains(" mokausi ");
+            bool kableliai1 = tekstas.Contains("mokausi,");
+            bool kableliai2 = tekstas.Contains(",mokausi");
+            bool klaustukas = tekstas.Contains("mokausi?");
+            bool skliaustai = tekstas.Contains("(mokausi)");
+
+            bool mokausi = tarpai || kableliai1 || kableliai2 || klaustukas || skliaustai;
+            if (mokausi = true)
+                return "true";
+            else return "false";
+
+
+
             
-            return tekstas;
 
         }
         public static int Aindex(string tekstas)
