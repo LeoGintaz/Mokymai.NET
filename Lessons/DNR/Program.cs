@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             string dnr = " T CG-TAC- gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cAt-AGA-GCT    ";         
                        
             bool showMenu = true;
@@ -64,43 +65,46 @@
             Console.WriteLine(@"
 [1] Keisti GCT į AGG
 [2] Ar yra CAT?
-[3] Veiksmai su DNR grandine
-[4] Išvesti trečia ir penktą grandinės segmentus
-[5] Išvesti raidžių kiekį tekste
-[6] Išvesti ar yra tekste ir kiek kartų pasikartoja iš klaviatūros įvestas segmento kodas
+[3] Išvesti trečia ir penktą grandinės segmentu
+[4] Išvesti raidžių kiekį tekste
+[5] Išvesti ar yra tekste ir kiek kartų pasikartoja iš klaviatūros įvestas segmento kodas
+[6] Prie grandinės galo pridėti iš klaviatūros įvesta segmentą
 [7] Iš grandinės pašalinti pasirinką elementą
-[8] Pakeisti pasirinkti segmentą įvestu iš klaviatūros
+[8] Pakeisti pasirinkta segmentą įvestu iš klaviatūros
 [9] Gryžti į ankstesnį meniu");
             switch (int.Parse(Console.ReadLine()))
             {
 
                 case 1:
-                  
+                    Console.WriteLine(dnr.Replace("GCT", "AGG"));
                     return true;
 
 
                 case 2:
-                    DnrValidacija(dnr);
+                    Console.WriteLine("Ar grandinėje yra CAT {0}", dnr.Contains("CAT"));
                     return true;
                 case 3:
-                    Console.Clear();
+                    var Segmentai = dnr.Split("-");
+                    Console.WriteLine(Segmentai[4][6]);
                     
                     return true;
                 case 4:
-                    return false;
+                    var kiekis = dnr.Replace("-", "");
+                    Console.WriteLine("Raidžiū kiekis : {0}", kiekis.Length);
+                    return true;
                 
                 case 5:
-                    return false;
+                    return true;
                 case 6:
-                    return false;
+                    return true;
                 case 7:
-                    return false;
+                    return true;
                 case 8:
-                    return false;
+                    return true;
                 case 9:
-                    return false;
+                    return true;
                 case 10:
-                    return false;
+                    return true;
                 default: return true;
 
             }
