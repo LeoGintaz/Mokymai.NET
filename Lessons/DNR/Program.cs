@@ -4,10 +4,8 @@
     {
         static void Main(string[] args)
         {
-            string dnr = " T CG-TAC- gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cAt-AGA-GCT    ";
-            //MeniuA(dnr);
-
-            //var choice = int.Parse(Console.ReadLine());
+            string dnr = " T CG-TAC- gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cAt-AGA-GCT    ";         
+                       
             bool showMenu = true;
             while (showMenu)
             {
@@ -18,7 +16,7 @@
 
         public static bool MainMenu(ref string dnr, ref bool iseiti)
         {
-            //string dnr = " T CG-TAC- gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cAt-AGA-GCT    ";
+            
             Console.WriteLine(@"
 [1] DNR grandinės normalizavimas
 [2] DNR grandinės validacija
@@ -27,8 +25,7 @@
             switch (int.Parse(Console.ReadLine()))
             {
                 
-                case 1:
-                    //string dnr = " T CG-TAC- gaC-TAC-CGT-CAG-ACT-TAa-CcA-GTC-cAt-AGA-GCT    ";
+                case 1:                    
                     DnrNormalizavimas(ref dnr);
                     Console.Clear();
                     Console.WriteLine($"Grandinė normalizuota : [{dnr}]");
@@ -51,15 +48,19 @@
             {
 
             if (dnr != "TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT")
+            {
                 Console.WriteLine("DNR nėra normalizuotas \n[1] Normalizuoti DNR\n[2] Išeiti");
-                switch (int.Parse(Console.ReadLine())) 
+                switch (int.Parse(Console.ReadLine()))
                 {
                     case 1:
                         DnrNormalizavimas(ref dnr);
+                        SubMenu(ref dnr, ref iseiti);
+                        Console.Clear();
                         return true;
                     case 2: return iseiti = false;
-                        default: return true;
+                    default: return true;
                 }
+            }
             Console.WriteLine(@"
 [1] Keisti GCT į AGG
 [2] Ar yra CAT?
@@ -74,10 +75,7 @@
             {
 
                 case 1:
-                    switch (int.Parse(Console.ReadLine()))
-                    { 
-                    
-                    }
+                  
                     return true;
 
 
@@ -110,7 +108,9 @@
 
         public static string DnrValidacija(string dnr)
         {
-            Console.WriteLine(dnr);
+            bool dnrValidacija = dnr.ToUpper().Replace("A", "").Replace("T", "").Replace("C", "").Replace("G", "").Replace(" ", "").Replace("-", "") == "";
+            Console.WriteLine("Ar DNR grandis - sudaryta tik iš A,T,C,G? \n {0}", dnrValidacija);
+
             return dnr;
         }
 
