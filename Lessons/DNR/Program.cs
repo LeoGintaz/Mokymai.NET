@@ -1,4 +1,6 @@
-﻿namespace DNR
+﻿using System.Linq;
+
+namespace DNR
 {
     public class Program
     {
@@ -25,6 +27,7 @@
 [4] Išeiti");
             switch (int.Parse(Console.ReadLine()))
             {
+                
                 
                 case 1:                    
                     DnrNormalizavimas(ref dnr);
@@ -76,29 +79,33 @@
             {
 
                 case 1:
-                    Console.WriteLine(dnr.Replace("GCT", "AGG"));
+                    ReplaceGCTtoAGG(ref dnr);                    
                     return true;
-
 
                 case 2:
-                    Console.WriteLine("Ar grandinėje yra CAT {0}", dnr.Contains("CAT"));
+                    IsCatInDNR(dnr);                    
                     return true;
+
                 case 3:
-                    var Segmentai = dnr.Split("-");
-                    Console.WriteLine(Segmentai[4][6]);
-                    
+                    Write3rd5thSegment(dnr);                                       
                     return true;
+
                 case 4:
-                    var kiekis = dnr.Replace("-", "");
-                    Console.WriteLine("Raidžiū kiekis : {0}", kiekis.Length);
+                    RaidziuKiekis(dnr);                    
                     return true;
                 
                 case 5:
+                    SegmentCount(dnr);                   
                     return true;
+
                 case 6:
+                    SegmentADD(dnr);
                     return true;
+
                 case 7:
+                    SegmentRemove(dnr);
                     return true;
+
                 case 8:
                     return true;
                 case 9:
@@ -108,6 +115,55 @@
                 default: return true;
 
             }
+        }
+
+        private static void SegmentRemove(string dnr)
+        {
+            Console.WriteLine("TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT\nĮveskite segmentą : ");
+            var segmentas = Console.ReadLine();
+            segmentas = dnr.Replace(segmentas, "");
+            Console.WriteLine(segmentas);
+        }
+
+        private static void SegmentADD(string dnr)
+        {
+            Console.WriteLine("TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT\nĮveskite segmentą : ");
+            var segmentas = Console.ReadLine();
+            Console.WriteLine(dnr + "-" + segmentas);
+            
+            
+        }
+
+        private static void SegmentCount(string dnr)
+        {
+            Console.WriteLine("TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT\nĮveskite segmentą : ");
+            var segmentas = Console.ReadLine();
+            segmentas = segmentas.ToUpper();
+            var segmentCount = dnr.Split("-").Count(c => c == segmentas);
+            Console.WriteLine("Šis segmentas pasikartoja {0} kartų", segmentCount);
+        }
+
+        private static void RaidziuKiekis(string dnr)
+        {
+            var kiekis = dnr.Replace("-", "");
+            Console.WriteLine("Raidžiū kiekis : {0}", kiekis.Length);
+        }
+
+        private static string[] Write3rd5thSegment(string dnr)
+        {
+            var Segmentai = dnr.Split("-");
+            Console.WriteLine(Segmentai[4][6]);
+            return Segmentai;
+        }
+
+        private static void IsCatInDNR(string dnr)
+        {
+            Console.WriteLine("Ar grandinėje yra CAT {0}", dnr.Contains("CAT"));
+        }
+
+        private static void ReplaceGCTtoAGG(ref string dnr)
+        {
+            Console.WriteLine(dnr.Replace("GCT", "AGG"));
         }
 
         public static string DnrValidacija(string dnr)
@@ -125,20 +181,7 @@
 
 
 
-        /* public static void MeniuA()
-         {
-             var choice = int.Parse(Console.ReadLine());
-             switch (meniu) 
-             {
-                 case 1:
-                     Console.WriteLine("kazkas");
-                     break;
-                 case 2:
-                     Console.WriteLine("kitas");
-                     break ;
-
-
-             }*/
+    
 
 
 
