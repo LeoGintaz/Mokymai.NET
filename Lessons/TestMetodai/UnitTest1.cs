@@ -53,7 +53,7 @@ namespace TestMetodai2
         }
 
         [TestMethod]
-        public void NeMokausi7()
+        public void IsMokausi7()
         {
             var fake = "as studijuoju (mokausi)";
             var expected = "taip";
@@ -61,7 +61,7 @@ namespace TestMetodai2
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void IsMokausiBe()
+        public void IsMokausi8()
         {
             var fake = "as studijuojumokausi)";
             var expected = "ne";

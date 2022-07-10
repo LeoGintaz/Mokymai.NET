@@ -53,22 +53,26 @@
 
           }*/
 
-
+        /*
         public static string Mokausi(string tekstas)
         {
-            bool tarpai = tekstas.Contains(" mokausi ");
-            bool kableliai1 = tekstas.Contains("mokausi,");
-            bool kableliai2 = tekstas.Contains(",mokausi");
-            bool klaustukas = tekstas.Contains("mokausi?");
+            bool tarpai = tekstas.Contains(" " + "mokausi" + " ");
+            bool kableliai1 = tekstas.Contains("mokausi" + ",");
+            bool kableliai2 = tekstas.Contains("," + "mokausi");
+            bool klaustukas = tekstas.Contains("mokausi" + "?");
             bool skliaustai = tekstas.Contains("(mokausi)");
             bool sauktukas = tekstas.Contains("mokausi!");
 
-            bool mokausi = tarpai || kableliai1 || kableliai2 || klaustukas || skliaustai || sauktukas;
-            if (mokausi = true)
-                return "taip";
-            else return "ne";
+            bool mokausi1 = tekstas.Contains("mokausi");
+            if (mokausi1 = true)
+            { var mokausi = "mokausi";
 
 
+                if (tekstas.Contains(mokausi + " " + mokausi + "," || mokausi + "?" || mokausi + "!" || "(" + mokausi + ")" || "," + mokausi)
+                    return "taip";
+                else return "ne";
+            }
+        */
 
             
 
