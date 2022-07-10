@@ -79,39 +79,50 @@ namespace DNR
             {
 
                 case 1:
+                    Console.Clear();
                     ReplaceGCTtoAGG(ref dnr);                    
                     return true;
 
                 case 2:
+                    Console.Clear();
                     IsCatInDNR(dnr);                    
                     return true;
 
                 case 3:
+                    Console.Clear();
                     Write3rd5thSegment(dnr);                                       
                     return true;
 
                 case 4:
+                    Console.Clear();
                     RaidziuKiekis(dnr);                    
                     return true;
                 
                 case 5:
+                    Console.Clear();
                     SegmentCount(dnr);                   
                     return true;
 
                 case 6:
+                    Console.Clear();
                     SegmentADD(dnr);
+                    
                     return true;
 
                 case 7:
+                    Console.Clear();
                     SegmentRemove(dnr);
+                    
                     return true;
 
                 case 8:
+                    Console.Clear();
                     return true;
+
                 case 9:
+                    Console.Clear();
                     return true;
-                case 10:
-                    return true;
+                
                 default: return true;
 
             }
@@ -152,7 +163,7 @@ namespace DNR
         private static string[] Write3rd5thSegment(string dnr)
         {
             var Segmentai = dnr.Split("-");
-            Console.WriteLine(Segmentai[4][6]);
+            Console.WriteLine(Segmentai[4] + "-" + Segmentai[6]);
             return Segmentai;
         }
 
