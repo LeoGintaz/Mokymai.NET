@@ -80,43 +80,90 @@ namespace DNR
 
                 case 1:
                     Console.Clear();
-                    ReplaceGCTtoAGG(ref dnr);                    
+                    ReplaceGCTtoAGG(ref dnr);
+                    Console.ReadKey();
+                    Console.Clear();
+                    SubMenu(ref dnr, ref iseiti);
                     return true;
 
                 case 2:
                     Console.Clear();
-                    IsCatInDNR(dnr);                    
+                    IsCatInDNR(ref dnr);
+                    Console.ReadKey();
+                    Console.Clear();
+                    SubMenu(ref dnr, ref iseiti);
                     return true;
 
                 case 3:
                     Console.Clear();
-                    Write3rd5thSegment(dnr);                                       
+                    Write3rd5thSegment(ref dnr);
+                    Console.ReadKey();
+                    Console.Clear();
+                    SubMenu(ref dnr, ref iseiti);
                     return true;
 
                 case 4:
                     Console.Clear();
-                    RaidziuKiekis(dnr);                    
+                    RaidziuKiekis(ref dnr);
+                    Console.ReadKey();
+                    Console.Clear();
+                    SubMenu(ref dnr, ref iseiti);
                     return true;
                 
                 case 5:
                     Console.Clear();
-                    SegmentCount(dnr);                   
+                    SegmentCount(ref dnr);
+                    Console.ReadKey();
+                    Console.Clear();
+                    SubMenu(ref dnr, ref iseiti);
                     return true;
 
                 case 6:
                     Console.Clear();
-                    SegmentADD(dnr);
-                    
+                   /* var isDNRvalid = DnrValidacija(dnr) == "true";
+                    if (isDNRvalid == true)
+                    {*/
+                        SegmentADD(ref dnr);
+                        Console.ReadKey();
+                        Console.Clear();
+                        SubMenu(ref dnr, ref iseiti);
+                   /* }
+                    else
+                    {
+                        Console.WriteLine("Reikalinga Validacija");
+                        Console.ReadKey();
+                        Console.Clear();
+                        SubMenu(ref dnr, ref iseiti);
+                    }*/
                     return true;
 
                 case 7:
                     Console.Clear();
-                    SegmentRemove(dnr);
-                    
+                    SegmentRemove(ref dnr);
+                    Console.ReadKey();
+                    Console.Clear();
+                    SubMenu(ref dnr, ref iseiti);
+
                     return true;
 
                 case 8:
-                    Console.Clear();
+                    { Console.Clear();
+                    //isDNRvalid = DnrValidacija(dnr) == "true";
+                    //if (isDNRvalid == true)
+                    //{
+                        SegmentChange(ref dnr);
+                        Console.ReadKey();
+                        Console.Clear();
+                        SubMenu(ref dnr, ref iseiti);
+                   // }
+                    //else
+                   // {
+                        //Console.WriteLine("Reikalinga Validacija");
+                       // Console.ReadKey();
+                       // Console.Clear();
+                       // SubMenu(ref dnr, ref iseiti);
+                    }
+
                     return true;
 
                 case 9:
@@ -128,7 +175,16 @@ namespace DNR
             }
         }
 
-        private static void SegmentRemove(string dnr)
+        private static void SegmentChange(ref string dnr)
+        {
+            Console.WriteLine("{0} \n Įveskite segmentą kurį norite pakeisti :");
+            var segmentas = Console.ReadLine();
+            Console.WriteLine("Įvesskite naują segmentą : ");
+            var newSegmentas = Console.ReadLine();
+            Console.WriteLine(dnr.Replace(segmentas, newSegmentas));
+        }
+
+        private static void SegmentRemove(ref string dnr)
         {
             Console.WriteLine("TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT\nĮveskite segmentą : ");
             var segmentas = Console.ReadLine();
@@ -136,7 +192,7 @@ namespace DNR
             Console.WriteLine(segmentas);
         }
 
-        private static void SegmentADD(string dnr)
+        private static void SegmentADD(ref string dnr)
         {
             Console.WriteLine("TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT\nĮveskite segmentą : ");
             var segmentas = Console.ReadLine();
@@ -145,7 +201,7 @@ namespace DNR
             
         }
 
-        private static void SegmentCount(string dnr)
+        private static void SegmentCount(ref string dnr)
         {
             Console.WriteLine("TCG-TAC-GAC-TAC-CGT-CAG-ACT-TAA-CCA-GTC-CAT-AGA-GCT\nĮveskite segmentą : ");
             var segmentas = Console.ReadLine();
@@ -154,20 +210,20 @@ namespace DNR
             Console.WriteLine("Šis segmentas pasikartoja {0} kartų", segmentCount);
         }
 
-        private static void RaidziuKiekis(string dnr)
+        private static void RaidziuKiekis(ref string dnr)
         {
             var kiekis = dnr.Replace("-", "");
             Console.WriteLine("Raidžiū kiekis : {0}", kiekis.Length);
         }
 
-        private static string[] Write3rd5thSegment(string dnr)
+        private static string[] Write3rd5thSegment(ref string dnr)
         {
             var Segmentai = dnr.Split("-");
             Console.WriteLine(Segmentai[4] + "-" + Segmentai[6]);
             return Segmentai;
         }
 
-        private static void IsCatInDNR(string dnr)
+        private static void IsCatInDNR(ref string dnr)
         {
             Console.WriteLine("Ar grandinėje yra CAT {0}", dnr.Contains("CAT"));
         }
@@ -180,7 +236,13 @@ namespace DNR
         public static string DnrValidacija(string dnr)
         {
             bool dnrValidacija = dnr.ToUpper().Replace("A", "").Replace("T", "").Replace("C", "").Replace("G", "").Replace(" ", "").Replace("-", "") == "";
+            var contains3split = dnr.ToUpper().Split("-");
+            bool contains3 = contains3split.All(x => x.Length == 3);
+            Console.WriteLine("Ar visi elementai susideda is 3 ? : \n {0}", contains3);
+
             Console.WriteLine("Ar DNR grandis - sudaryta tik iš A,T,C,G? \n {0}", dnrValidacija);
+            var dnr2 = dnrValidacija == true && contains3 == true;
+            dnr = dnr2.ToString();
 
             return dnr;
         }
@@ -192,8 +254,8 @@ namespace DNR
 
 
 
-    
 
+      
 
 
 
