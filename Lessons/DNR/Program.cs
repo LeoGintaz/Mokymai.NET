@@ -177,7 +177,7 @@ namespace DNR
 
         private static void SegmentChange(ref string dnr)
         {
-            Console.WriteLine("{0} \n Įveskite segmentą kurį norite pakeisti :");
+            Console.WriteLine("{0} \n Įveskite segmentą kurį norite pakeisti :", dnr);
             var segmentas = Console.ReadLine();
             Console.WriteLine("Įvesskite naują segmentą : ");
             var newSegmentas = Console.ReadLine();
