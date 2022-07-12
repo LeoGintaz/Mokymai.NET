@@ -21,7 +21,7 @@ namespace CiklaiUzduotys
             KelimasLaipsniu(skaicius, laipsnis);*/
 
             var skaicius = Console.ReadLine();
-            SkaiciuTrikampis(skaicius);
+            //SkaiciuTrikampis(skaicius);
             //SkaiciuTrikampis2(skaicius);
 
 
