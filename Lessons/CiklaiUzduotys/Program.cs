@@ -20,10 +20,10 @@ namespace CiklaiUzduotys
             int laipsnis = int.Parse(Console.ReadLine());
             KelimasLaipsniu(skaicius, laipsnis);*/
 
-            //var skaicius = Console.ReadLine();
-            var skaicius2 = int.Parse(Console.ReadLine());
+            string skaicius = Console.ReadLine();
+            //var skaicius2 = int.Parse(Console.ReadLine());
             //SkaiciuTrikampis(skaicius);
-            SkaiciuTrikampis2(skaicius2);
+            SkaiciuTrikampis2(skaicius);
 
 
 
@@ -75,24 +75,28 @@ namespace CiklaiUzduotys
                 
             }
         }
-        public static void SkaiciuTrikampis2(int skaicius)
+        public static void SkaiciuTrikampis2(string skaicius)
         {
+            var sb = new StringBuilder();
+            var skaiciusint = Convert.ToInt32(skaicius);
             Console.Clear();
-            for (int i = 0; i < skaicius; ++i)
+            for (int i = 0; i < skaiciusint; ++i)
             {
-                for (int j = 0; j < i + 1; j++)
-                {
-                    Console.Write(skaicius);
-                }
-                Console.WriteLine();
+                
+                
+                    sb.Append(skaicius);
+                    Console.WriteLine(sb.ToString());
             }
-            for (int i = skaicius; i > 0; i -= 1)
+                
+            
+            for (int i = skaiciusint; i > 0; i -= 1)
             {
-                for (int j = i - 1; j > 0; j -=1)
-                {
-                    Console.Write(skaicius);
-                }
-                Console.WriteLine();
+                
+                
+                    sb.Remove(0, 1);
+                    Console.WriteLine(sb.ToString());
+                
+                
             }
         }
 
