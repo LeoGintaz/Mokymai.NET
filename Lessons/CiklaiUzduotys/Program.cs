@@ -89,7 +89,7 @@ namespace CiklaiUzduotys
             }
                 
             
-            for (int i = skaiciusint; i > 0; i -= 1)
+            for (int i = skaiciusint; i > 0; i--)
             {
                 
                 
