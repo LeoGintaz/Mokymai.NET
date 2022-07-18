@@ -8,7 +8,15 @@ namespace _18July22
         {
             Console.WriteLine("Hello, World!");
             int[] masyvas = { 5, 3, 7, 6, 8, 7, 10 };
-            Rykiavimas(masyvas);
+            //Rykiavimas(masyvas);
+            var input = Console.ReadLine();
+            var mas = input.Split("");
+            var character = Console.ReadKey();
+            var character1 = Console.ReadKey();
+            var character2 = Console.ReadKey();
+            //char[] mas = { character , character2, character1 };
+            ABCsort(mas);
+
 
         }
 
@@ -71,6 +79,27 @@ namespace _18July22
 
             Console.WriteLine(String.Join(",", mas)); 
             return mas;
+        }
+
+        public static string[] ABCsort(int[] mas)
+        {
+            for (int i = 0; i < mas.Length; i++)
+            {
+                for (int j = i + 1; j < mas.Length; j++)
+                {
+                    if (mas[i] > mas[j])
+                    {
+                        int temp = mas[i];
+                        mas[i] = mas[j];
+                        mas[j] = temp;
+                    }
+                }
+            }
+
+            string mas2 = String.Join(",", mas);
+            var mas3 = mas2.Split(',');
+            Console.WriteLine(mas3);
+            return mas3;
         }
 
 
