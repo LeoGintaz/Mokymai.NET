@@ -47,7 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UzduotysCiklai", "UzduotysC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CiklaiUzduotys", "CiklaiUzduotys\CiklaiUzduotys.csproj", "{0B117A8A-1967-4A7C-A097-15034BEF08EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkaiciuotuvasApp", "SkaiciuotuvasApp\SkaiciuotuvasApp.csproj", "{CE370889-A051-4CCF-8C0D-5DBD3753FE3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkaiciuotuvasApp", "SkaiciuotuvasApp\SkaiciuotuvasApp.csproj", "{CE370889-A051-4CCF-8C0D-5DBD3753FE3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18July22", "18July22\18July22.csproj", "{ABE7F516-7DB1-427D-A540-B0686BD7EC37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18Jul22", "18Jul22\18Jul22.csproj", "{45E7F9C0-C1B0-4A5E-80DC-6FC269921E44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +147,14 @@ Global
 		{CE370889-A051-4CCF-8C0D-5DBD3753FE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE370889-A051-4CCF-8C0D-5DBD3753FE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE370889-A051-4CCF-8C0D-5DBD3753FE3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE7F516-7DB1-427D-A540-B0686BD7EC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE7F516-7DB1-427D-A540-B0686BD7EC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE7F516-7DB1-427D-A540-B0686BD7EC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE7F516-7DB1-427D-A540-B0686BD7EC37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E7F9C0-C1B0-4A5E-80DC-6FC269921E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E7F9C0-C1B0-4A5E-80DC-6FC269921E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E7F9C0-C1B0-4A5E-80DC-6FC269921E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E7F9C0-C1B0-4A5E-80DC-6FC269921E44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
