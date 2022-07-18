@@ -10,11 +10,11 @@ namespace _18July22
             int[] masyvas = { 5, 3, 7, 6, 8, 7, 10 };
             //Rykiavimas(masyvas);
             var input = Console.ReadLine();
-            var mas = input.Split("");
-            var character = Console.ReadKey();
-            var character1 = Console.ReadKey();
-            var character2 = Console.ReadKey();
-            //char[] mas = { character , character2, character1 };
+            //var mas = input.Split("");
+            var character = Convert.ToChar(Console.ReadLine());
+            var character1 = Convert.ToChar(Console.ReadLine());
+            var character2 = Convert.ToChar(Console.ReadLine());
+            char[] mas = { character , character2, character1 };
             ABCsort(mas);
 
 
@@ -81,7 +81,7 @@ namespace _18July22
             return mas;
         }
 
-        public static string[] ABCsort(int[] mas)
+        public static string[] ABCsort(char[] mas)
         {
             for (int i = 0; i < mas.Length; i++)
             {
@@ -89,7 +89,7 @@ namespace _18July22
                 {
                     if (mas[i] > mas[j])
                     {
-                        int temp = mas[i];
+                        char temp = mas[i];
                         mas[i] = mas[j];
                         mas[j] = temp;
                     }
