@@ -25,7 +25,7 @@
                     kalade.Add($"{korta}\n");
                 }
             }
-            Console.WriteLine(String.Join(" ", kalade));
+            Console.WriteLine(String.Join(' ', kalade));
             return kalade;
 
         }
