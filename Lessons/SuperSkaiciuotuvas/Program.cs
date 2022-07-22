@@ -3,22 +3,22 @@
     internal class Program
     {
         static double? rezultatas = null;
-        
+
         static void Main(string[] args)
         {
-         SuperSkaiciuotuvas();
+            SuperSkaiciuotuvas();
 
 
 
-                
-            
+
+
         }
 
-   
+
 
         public static void SuperSkaiciuotuvas()
         {
-            
+
             bool showMenu = true;
             while (showMenu == true)
             {
@@ -43,7 +43,7 @@
                             ///////////////////////////////////////////////
                             Console.WriteLine("            Negalimas pasirinkimas!");
                             showMenu = true;
-                            break ;
+                            break;
                         }
 
 
@@ -61,15 +61,15 @@
             switch (Console.ReadLine())
             {
                 case "1":
-                    Sudėtis();                  
+                    Sudėtis();
                     break;
                 case "2":
-                    Atimtis();
+                   // Atimtis();
                     break;
                 case "3":
-                    Daugyba();
+                  //  Daugyba();
                     break;
-                    Dalyba();
+                   // Dalyba();
                 case "4":
                     break;
 
@@ -77,6 +77,22 @@
             }
         }
 
+        private static void Sudėtis()
+        {
+            Ivestis()[];
+            Console.WriteLine();
+            
+        }
+
+        public static Tuple<string?, string?> Ivestis()
+        {
+            Console.WriteLine("             Įvesskite pirmą skaičių");
+            var input1 = Console.ReadLine();
+            Console.WriteLine("             Įvesskite antrą skaičių");
+            var input2 = Console.ReadLine();
+            var ivestis = new Tuple<string?, string?>(input1, input2);
+            return ivestis;
+        }
         public static double Rezultatas()
         {
             return rezultatas ?? 0;
@@ -86,6 +102,8 @@
             //todo
             rezultatas = null;
         }
+        
+
     }
 }
 
