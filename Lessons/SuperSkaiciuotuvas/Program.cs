@@ -72,8 +72,8 @@
                         }
                         else
                         {
-                            var sudetis = result + result2;
-                            Console.WriteLine(sudetis);
+                            var rezultatas = result + result2;
+                            Console.WriteLine(rezultatas);
                         }
                         break;
                     }
@@ -89,8 +89,8 @@
                         }
                         else
                         {
-                            var sudetis = result - result2;
-                            Console.WriteLine(sudetis);
+                            var rezultatas = result - result2;
+                            Console.WriteLine(rezultatas);
                         }
                         break;
                     }
@@ -106,8 +106,8 @@
                         }
                         else
                         {
-                            var sudetis = result * result2;
-                            Console.WriteLine(sudetis);
+                            var rezultatas = result * result2;
+                            Console.WriteLine(rezultatas);
                         }
                         break;
                     }
@@ -122,10 +122,13 @@
 
 
                         }
+                        if (result2 == 0)
+                            Console.WriteLine("Dalyba is nulio negalima");
+
                         else
                         {
-                            var sudetis = result / result2;
-                            Console.WriteLine(sudetis);
+                            var rezultatas = result / result2;
+                            Console.WriteLine(rezultatas);
                         }
                         break;
                     }
