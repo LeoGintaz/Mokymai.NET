@@ -1,6 +1,6 @@
 ﻿namespace SuperSkaiciuotuvas
 {
-    internal class Program
+    public class Program
     {
         static double? rezultatas = null;
 
@@ -57,41 +57,97 @@
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
-            [2] Dalyba");
+            [4] Dalyba");
             switch (Console.ReadLine())
             {
                 case "1":
-                    Sudėtis();
-                    break;
+                    {
+                        var input1 = double.TryParse(Program.Ivestis(), out double result);
+                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
+                        if (input1 == false || input2 == false) 
+                        {
+                            Console.WriteLine("Negalima ivestis");
+
+
+                        }
+                        else
+                        {
+                            var sudetis = result + result2;
+                            Console.WriteLine(sudetis);
+                        }
+                        break;
+                    }
                 case "2":
-                   // Atimtis();
-                    break;
+                    {
+                        var input1 = double.TryParse(Program.Ivestis(), out double result);
+                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
+                        if (input1 == false || input2 == false)
+                        {
+                            Console.WriteLine("Negalima ivestis");
+
+
+                        }
+                        else
+                        {
+                            var sudetis = result - result2;
+                            Console.WriteLine(sudetis);
+                        }
+                        break;
+                    }
                 case "3":
-                  //  Daugyba();
-                    break;
-                   // Dalyba();
+                    {
+                        var input1 = double.TryParse(Program.Ivestis(), out double result);
+                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
+                        if (input1 == false || input2 == false)
+                        {
+                            Console.WriteLine("Negalima ivestis");
+
+
+                        }
+                        else
+                        {
+                            var sudetis = result * result2;
+                            Console.WriteLine(sudetis);
+                        }
+                        break;
+                    }
+                
                 case "4":
+                    {
+                        var input1 = double.TryParse(Program.Ivestis(), out double result);
+                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
+                        if (input1 == false || input2 == false)
+                        {
+                            Console.WriteLine("Negalima ivestis");
+
+
+                        }
+                        else
+                        {
+                            var sudetis = result / result2;
+                            Console.WriteLine(sudetis);
+                        }
+                        break;
+                    }
                     break;
 
 
             }
         }
 
-        private static void Sudėtis()
-        {
-            Ivestis()[];
-            Console.WriteLine();
-            
-        }
 
-        public static Tuple<string?, string?> Ivestis()
+        public static string? Ivestis2()
+        {
+            Console.WriteLine("             Įvesskite antrą skaičių");
+            var input = Console.ReadLine();
+           
+            return input;
+        }
+        public static string? Ivestis()
         {
             Console.WriteLine("             Įvesskite pirmą skaičių");
-            var input1 = Console.ReadLine();
-            Console.WriteLine("             Įvesskite antrą skaičių");
-            var input2 = Console.ReadLine();
-            var ivestis = new Tuple<string?, string?>(input1, input2);
-            return ivestis;
+            var input = Console.ReadLine();
+            return input;
         }
         public static double Rezultatas()
         {
