@@ -6,7 +6,7 @@
 
         static void Main(string[] args)
         {
-            
+            Console.CursorLeft = Console.WindowWidth / 2;
 
             SuperSkaiciuotuvas();
 
@@ -25,7 +25,7 @@
             bool showMenu = true;
             while (showMenu == true)
             {
-                
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(@"
             [1] Nauja Operacija
             [2] Testi su rezultatu
@@ -52,7 +52,10 @@
                         break;
                     default:
                         {
-                          
+                            //////////////////////////////////////////////////
+                            Console.Clear();/////////////////////////////////
+                            Console.ForegroundColor = ConsoleColor.Red;/////
+                            ///////////////////////////////////////////////
                             Console.WriteLine("            Negalimas pasirinkimas!");
                             showMenu = true;
                             break;
@@ -66,7 +69,7 @@
 
         public static void Operacijos2()
         {
-            
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
@@ -116,13 +119,13 @@
 
         public static void Operacijos()
         {
-            
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
             [4] Dalyba");
-            
+            Console.CursorLeft = Console.WindowWidth / 2;
             switch (Console.ReadLine())
             {
                 case "1":
@@ -174,7 +177,9 @@
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-              
+                /////////////////////////////////////////////////
+                Console.ForegroundColor = ConsoleColor.Red;/////
+                                                           //////////////////////////////////////////////// 
                 Console.WriteLine("Negalima ivestis");
                 Operacijos();
             }
@@ -189,7 +194,9 @@
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-         
+                /////////////////////////////////////////////////
+                Console.ForegroundColor = ConsoleColor.Red;/////
+                                                           //////////////////////////////////////////////// 
                 Console.WriteLine("Negalima ivestis");
                 Operacijos();
             }
