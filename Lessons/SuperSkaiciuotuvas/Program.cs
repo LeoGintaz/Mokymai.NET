@@ -6,7 +6,10 @@
 
         static void Main(string[] args)
         {
+            Console.CursorLeft = Console.WindowWidth / 2;
+
             SuperSkaiciuotuvas();
+            
 
 
 
@@ -14,9 +17,39 @@
 
         }
 
+        private static void TesimasSuRezultatu()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(@"
+            [1] Nauja Operacija
+            [2] Išeiti");
 
+            switch (Console.ReadLine())
+            {
+                case "1"
 
-        public static void SuperSkaiciuotuvas()
+                case "2":
+                    Reset();
+                    Operacijos();
+
+                    break;
+                case "3":
+
+                    break;
+                default:
+                    {
+                        //////////////////////////////////////////////////
+                        Console.Clear();/////////////////////////////////
+                        Console.ForegroundColor = ConsoleColor.Red;/////
+                        ///////////////////////////////////////////////
+                        Console.WriteLine("            Negalimas pasirinkimas!");
+                        break;
+                    }
+
+            }
+         }
+
+            public static void SuperSkaiciuotuvas()
         {
 
             bool showMenu = true;
@@ -26,6 +59,7 @@
                 Console.WriteLine(@"
             [1] Nauja Operacija
             [2] Išeiti");
+                
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -53,84 +87,49 @@
         }
         private static void Operacijos()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
             [4] Dalyba");
+            Console.CursorLeft = Console.WindowWidth / 2;
             switch (Console.ReadLine())
             {
                 case "1":
                     {
-                        var input1 = double.TryParse(Program.Ivestis(), out double result);
-                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
-                        if (input1 == false || input2 == false) 
-                        {
-                            Console.WriteLine("Negalima ivestis");
 
-
-                        }
-                        else
-                        {
-                            var rezultatas = result + result2;
-                            Console.WriteLine(rezultatas);
-                        }
+                        rezultatas = Ivestis() + Ivestis2();
+                        Console.WriteLine(rezultatas);
                         break;
+
+                   
                     }
                 case "2":
                     {
-                        var input1 = double.TryParse(Program.Ivestis(), out double result);
-                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
-                        if (input1 == false || input2 == false)
-                        {
-                            Console.WriteLine("Negalima ivestis");
-
-
-                        }
-                        else
-                        {
-                            var rezultatas = result - result2;
-                            Console.WriteLine(rezultatas);
-                        }
+                        rezultatas = Ivestis() - Ivestis2();
+                        Console.WriteLine(rezultatas);
                         break;
                     }
                 case "3":
                     {
-                        var input1 = double.TryParse(Program.Ivestis(), out double result);
-                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
-                        if (input1 == false || input2 == false)
-                        {
-                            Console.WriteLine("Negalima ivestis");
-
-
-                        }
-                        else
-                        {
-                            var rezultatas = result * result2;
-                            Console.WriteLine(rezultatas);
-                        }
-                        break;
+                        rezultatas = Ivestis() * Ivestis2();
+                        Console.WriteLine(rezultatas);
                     }
+                    break;
                 
                 case "4":
                     {
-                        var input1 = double.TryParse(Program.Ivestis(), out double result);
-                        var input2 = double.TryParse(Program.Ivestis2(), out double result2);
-                        if (input1 == false || input2 == false)
+                        var ivestis = Ivestis();
+                        var ivestis2 = Ivestis2();
+                        
+                        if (ivestis2 == 0)
                         {
-                            Console.WriteLine("Negalima ivestis");
-
-
-                        }
-                        if (result2 == 0)
                             Console.WriteLine("Dalyba is nulio negalima");
-
-                        else
-                        {
-                            var rezultatas = result / result2;
-                            Console.WriteLine(rezultatas);
+                            break;
                         }
-                        break;
+                        rezultatas = ivestis + ivestis2;
+                        Console.WriteLine(rezultatas);
                     }
                     break;
 
@@ -138,19 +137,38 @@
             }
         }
 
-
-        public static string? Ivestis2()
+     
+        public static double Ivestis2()
         {
-            Console.WriteLine("             Įvesskite antrą skaičių");
-            var input = Console.ReadLine();
-           
-            return input;
+            Console.WriteLine("Įvesskite antrą skaičių");
+            
+            var input = double.TryParse(Console.ReadLine(), out double result);
+            if (input == false)
+            {
+                /////////////////////////////////////////////////
+                Console.ForegroundColor = ConsoleColor.Red;/////
+               //////////////////////////////////////////////// 
+                Console.WriteLine("Negalima ivestis");
+                Operacijos();
+            }
+            
+            return result;
         }
-        public static string? Ivestis()
+        public static double Ivestis()
         {
-            Console.WriteLine("             Įvesskite pirmą skaičių");
-            var input = Console.ReadLine();
-            return input;
+            
+            Console.WriteLine("Įvesskite pirmą skaičių");
+            
+            var input = double.TryParse(Console.ReadLine(), out double result);
+            if (input == false)
+            {
+                /////////////////////////////////////////////////
+                Console.ForegroundColor = ConsoleColor.Red;/////
+               //////////////////////////////////////////////// 
+                Console.WriteLine("Negalima ivestis");
+                Operacijos();
+            }
+            return result;
         }
         public static double Rezultatas()
         {
