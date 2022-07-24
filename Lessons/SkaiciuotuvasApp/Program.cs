@@ -1,95 +1,303 @@
-﻿using System.Text;
-
-namespace SkaiciuotuvasApp
+﻿namespace SuperSkaiciuotuvas
 {
-
-    internal class Program
-        
+    public class Program
     {
-        int input2 = int.Parse(Console.ReadLine());
-        int input3 = int.Parse(Console.ReadLine());
-        int input4 = int.Parse(Console.ReadLine());
+        static double? rezultatas = null;
+
         static void Main(string[] args)
         {
-            //string input = Console.ReadLine();
-            //int input2 = int.Parse(Console.ReadLine());
-            //SkaiciuEile(input , input2);
-            //DaugybosLentele(input2);
+            Console.CursorLeft = Console.WindowWidth / 2;
 
-            Skaiciuotiuvas();
+            SuperSkaiciuotuvas();
+            
+
+
+
+
 
         }
 
-        private static void Skaiciuotiuvas()
+
+
+            public static void SuperSkaiciuotuvas()
         {
+
             bool showMenu = true;
-            while (showMenu)
+            while (showMenu == true)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(@"
+            [1] Nauja Operacija
+            [2] Testi su rezultatu
+            [3] Išeiti");
                 
-                showMenu = MainMenu();
-            }
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        Operacijos();
+                        showMenu = true;
+                        break;
+                    case "2":
+                        if (rezultatas == null)
+                        { Console.WriteLine("Operacija negalima");
+                            showMenu = true;
+                            break;
+                        }
+                            Operacijos2();
+                            break;
 
+                    case "3":
+                        showMenu = false;
+                        break;
+                    default:
+                        {
+                            //////////////////////////////////////////////////
+                            Console.Clear();/////////////////////////////////
+                            Console.ForegroundColor = ConsoleColor.Red;/////
+                            ///////////////////////////////////////////////
+                            Console.WriteLine("            Negalimas pasirinkimas!");
+                            showMenu = true;
+                            break;
+                        }
+
+
+                }
+
+            }
         }
 
-        private static bool MainMenu()
+        public static void Operacijos2()
         {
-            Console.WriteLine("iveskite pirma skaiciu");
-            int input2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("iveskite antra skaiciu");
-            int input3 = int.Parse(Console.ReadLine());
-
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
-[1] Sudėtis
-[2] Atimtis
-[3] Daugyba
-[4] Dalyba
-[5] Išeiti");
-            switch (int.Parse(Console.ReadLine()))
+            [1] Sudėtis
+            [2] Atimtis
+            [3] Daugyba
+            [4] Dalyba");
+            Console.CursorLeft = Console.WindowWidth / 2;
+            switch (Console.ReadLine())
             {
+                case "1":
+                    {
+
+                        rezultatas = rezultatas + Ivestis2();
+                        Console.WriteLine(rezultatas);
+                        break;
 
 
-                case 1:
-                    Console.WriteLine(input2 + input3);
-                    return true;
-                case 2:
-                    Console.WriteLine(input2 - input3);
-                    return true;
-                case 3:
-                    Console.WriteLine(input2 * input3);
-                    return true;
-                case 4:
-                    Console.WriteLine(input2 / input3);
-                    return true;
-                case 5:
-                    return false;
-                default: return true;
-            }
+                    }
+                case "2":
+                    {
+                        rezultatas = rezultatas - Ivestis2();
+                        Console.WriteLine(rezultatas);
+                        break;
+                    }
+                case "3":
+                    {
+                        rezultatas = rezultatas * Ivestis2();
+                        Console.WriteLine(rezultatas);
+                    }
+                    break;
 
+                case "4":
+                    {
+                        
+                        var ivestis2 = Ivestis2();
 
-        }
-        private static void DaugybosLentele(int input2)
+                        if (ivestis2 == 0)
+                        {
+                            Console.WriteLine("Dalyba is nulio negalima");
+                            break;
+                        }
+                        rezultatas = rezultatas / ivestis2;
+                        Console.WriteLine(rezultatas);
+                    }
+                    break;
+            }  }
+
+        public static void Operacijos()
         {
-            for (int i = 1; i <= 11; i++)
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(@"
+            [1] Sudėtis
+            [2] Atimtis
+            [3] Daugyba
+            [4] Dalyba");
+            Console.CursorLeft = Console.WindowWidth / 2;
+            switch (Console.ReadLine())
             {
-                var suma = input2 * i;
-                Console.WriteLine($"{input2} * {i} = {suma}");
+                case "1":
+                    {
+
+                        rezultatas = Ivestis() + Ivestis2();
+                        Console.WriteLine(rezultatas);
+                        break;
+
+                   
+                    }
+                case "2":
+                    {
+                        rezultatas = Ivestis() - Ivestis2();
+                        Console.WriteLine(rezultatas);
+                        break;
+                    }
+                case "3":
+                    {
+                        rezultatas = Ivestis() * Ivestis2();
+                        Console.WriteLine(rezultatas);
+                    }
+                    break;
+                
+                case "4":
+                    {
+                        var ivestis = Ivestis();
+                        var ivestis2 = Ivestis2();
+                        
+                        if (ivestis2 == 0)
+                        {
+                            Console.WriteLine("Dalyba is nulio negalima");
+                            break;
+                        }
+                        rezultatas = ivestis / ivestis2;
+                        Console.WriteLine(rezultatas);
+                    }
+                    break;
+
+
             }
         }
 
-        private static void SkaiciuEile(string input, int input2)
+     
+        public static double Ivestis2()
         {
-            var sb = new StringBuilder();
-            for (int i = 0; i < input2; i++)
+            Console.WriteLine("Įvesskite antrą skaičių");
+            
+            var input = double.TryParse(Console.ReadLine(), out double result);
+            if (input == false)
             {
-                Console.Write("->");
-                sb.Append(input);
-                Console.Write(sb);
+                /////////////////////////////////////////////////
+                Console.ForegroundColor = ConsoleColor.Red;/////
+               //////////////////////////////////////////////// 
+                Console.WriteLine("Negalima ivestis");
+                Operacijos();
             }
-
+            
+            return result;
         }
+        public static double Ivestis()
+        {
+            
+            Console.WriteLine("Įvesskite pirmą skaičių");
+            
+            var input = double.TryParse(Console.ReadLine(), out double result);
+            if (input == false)
+            {
+                /////////////////////////////////////////////////
+                Console.ForegroundColor = ConsoleColor.Red;/////
+               //////////////////////////////////////////////// 
+                Console.WriteLine("Negalima ivestis");
+                Operacijos();
+            }
+            return result;
+        }
+        public static double Rezultatas()
+        {
+            return rezultatas ?? 0;
+        }
+        public static void Reset()
+        {
+            //todo
+            rezultatas = null;
+        }
+        
+
+    }
+}
+
+/* UzDuoties salygos
+{
+    /* ## Super Skaiciuotuvas ## 
+        Sukurti skaiciuotuva. Ijungus programa turetume gauti pranešimą “
+        1. Nauja operacija 2 Iseiti. 
+        
+        Pasirinkus 1 vada į submeniu:
+        1. Sudetis 2. Atimtis 3. Daugyba 4. Dalyba
+    
+        Pasirinkus viena is operaciju programa turetu paprasyti naudotoja ivesti pirma ir antra skaicius,
+        o gale isvesti rezultata į ekraną. Po rezultato parodymo naudotojui parodomas submeniu su klausimu ar naudotojas nori atlikti nauja operacija ar testi su rezultatu. 
+        1. Nauja operacija 2. Testi su rezultatu 3. Iseiti”
+        Pasirinkus 2 programa turetu paprasyti ivesti kokia operacija turetu buti atliekama ir paprasyti TIK SEKANCIO SKAITMENS. 
+        Pasirinkus 3 programa turetu issijungti. Visa kita turetu veikti tokiu pat budu.
+    
+    Pvz:
+    > 1. Nauja operacija 2 Iseiti. 
+    _1
+    > 1. Sudetis 2. Atimtis 3. Daugyba 4. Dalyba
+    _1
+    > pasirinktas veiksmas + 
+    > iveskite pirma skaiciu
+    _15
+    > iveskite antra skaiciu
+    _45
+    > Rezultatas: 60
+    > 1. Nauja operacija 2. Testi su rezultatu 3. Iseiti
+    _2
+    > 1. Sudetis 2. Atimtis 3. Daugyba 4. Dalyba
+    _2
+    > pasirinktas veiksmas - 
+    > Iveskite skaiciu
+    _10
+    > Rezultatas: 50
+    > 1. Nauja operacija 2. Testi su rezultatu 3. Iseiti
+    _1
+    > 1. Sudetis 2. Atimtis 3. Daugyba 4. Dalyba
+    _2
+    > pasirinktas veiksmas * 
+      > iveskite pirma skaiciu
+    _2
+    > iveskite antra skaiciu
+    _3
+    > Rezultatas: 6
+    > 1. Nauja operacija 2. Testi su rezultatu 3. Iseiti
+    _3
+    > Baigta
+     
+    
+    
+    BONUS1: Iskelkite operacijas i metodus
+    BONUS2: Parasykite operacijoms validacijas pries ivestus neteisingus skaicius. 
+            - dalyba is nulio, neteisingu ivesciu prevencija 
+            - kada tikimasi gauti skaiciu, bet gaunamas char arba string.
+            - neteisingas meniu punkto pasirinkimas
+    BONUS3: Parasyti unit testus uztikrinant operaciju veikima
+    BONUS4: Parasyti laipsnio pakelimo ir saknies traukimo operacijas
+    
+       
+public class Program
+{
+    static double? rezultatas = null;
+
+    static void Main(string[] args)
+    {
 
     }
 
 
+    public static void SuperSkaiciuotuvas(string ivedimas)
+    {
+        //todo
+    }
 
-}
+    public static double Rezultatas()
+    {
+        return rezultatas ?? 0;
+    }
+    public static void Reset()
+    {
+        //todo
+        rezultatas = null;
+    }
+
+
+
+*/

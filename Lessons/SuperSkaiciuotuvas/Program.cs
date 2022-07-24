@@ -6,10 +6,10 @@
 
         static void Main(string[] args)
         {
-            Console.CursorLeft = Console.WindowWidth / 2;
+            
 
             SuperSkaiciuotuvas();
-            
+
 
 
 
@@ -19,18 +19,18 @@
 
 
 
-            public static void SuperSkaiciuotuvas()
+        public static void SuperSkaiciuotuvas()
         {
 
             bool showMenu = true;
             while (showMenu == true)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
+                
                 Console.WriteLine(@"
             [1] Nauja Operacija
             [2] Testi su rezultatu
             [3] Išeiti");
-                
+
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -39,22 +39,20 @@
                         break;
                     case "2":
                         if (rezultatas == null)
-                        { Console.WriteLine("Operacija negalima");
+                        {
+                            Console.WriteLine("Operacija negalima");
                             showMenu = true;
                             break;
                         }
-                            Operacijos2();
-                            break;
+                        Operacijos2();
+                        break;
 
                     case "3":
                         showMenu = false;
                         break;
                     default:
                         {
-                            //////////////////////////////////////////////////
-                            Console.Clear();/////////////////////////////////
-                            Console.ForegroundColor = ConsoleColor.Red;/////
-                            ///////////////////////////////////////////////
+                          
                             Console.WriteLine("            Negalimas pasirinkimas!");
                             showMenu = true;
                             break;
@@ -66,9 +64,9 @@
             }
         }
 
-        private static void Operacijos2()
+        public static void Operacijos2()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
@@ -101,7 +99,7 @@
 
                 case "4":
                     {
-                        
+
                         var ivestis2 = Ivestis2();
 
                         if (ivestis2 == 0)
@@ -113,17 +111,18 @@
                         Console.WriteLine(rezultatas);
                     }
                     break;
-            }  }
+            }
+        }
 
-        private static void Operacijos()
+        public static void Operacijos()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
             [4] Dalyba");
-            Console.CursorLeft = Console.WindowWidth / 2;
+            
             switch (Console.ReadLine())
             {
                 case "1":
@@ -133,7 +132,7 @@
                         Console.WriteLine(rezultatas);
                         break;
 
-                   
+
                     }
                 case "2":
                     {
@@ -147,12 +146,12 @@
                         Console.WriteLine(rezultatas);
                     }
                     break;
-                
+
                 case "4":
                     {
                         var ivestis = Ivestis();
                         var ivestis2 = Ivestis2();
-                        
+
                         if (ivestis2 == 0)
                         {
                             Console.WriteLine("Dalyba is nulio negalima");
@@ -167,34 +166,30 @@
             }
         }
 
-     
+
         public static double Ivestis2()
         {
             Console.WriteLine("Įvesskite antrą skaičių");
-            
+
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-                /////////////////////////////////////////////////
-                Console.ForegroundColor = ConsoleColor.Red;/////
-               //////////////////////////////////////////////// 
+              
                 Console.WriteLine("Negalima ivestis");
                 Operacijos();
             }
-            
+
             return result;
         }
         public static double Ivestis()
         {
-            
+
             Console.WriteLine("Įvesskite pirmą skaičių");
-            
+
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-                /////////////////////////////////////////////////
-                Console.ForegroundColor = ConsoleColor.Red;/////
-               //////////////////////////////////////////////// 
+         
                 Console.WriteLine("Negalima ivestis");
                 Operacijos();
             }
@@ -209,7 +204,7 @@
             //todo
             rezultatas = null;
         }
-        
+
 
     }
 }

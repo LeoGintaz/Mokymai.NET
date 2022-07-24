@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEach", "ForEach\ForEach.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kortos", "kortos\kortos.csproj", "{DCD4325C-A553-4910-A794-8AFC715F70D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSkaiciuotuvas", "SuperSkaiciuotuvas\SuperSkaiciuotuvas.csproj", "{D91B3B68-B0ED-4474-9A87-5B465D2CACEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperSkaiciuotuvas", "SuperSkaiciuotuvas\SuperSkaiciuotuvas.csproj", "{D91B3B68-B0ED-4474-9A87-5B465D2CACEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSkaiciuotuvasTest", "SuperSkaiciuotuvasTest\SuperSkaiciuotuvasTest.csproj", "{33AFE967-2E80-4C8B-B096-D9F606A98F9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -185,12 +187,17 @@ Global
 		{D91B3B68-B0ED-4474-9A87-5B465D2CACEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D91B3B68-B0ED-4474-9A87-5B465D2CACEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D91B3B68-B0ED-4474-9A87-5B465D2CACEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33AFE967-2E80-4C8B-B096-D9F606A98F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33AFE967-2E80-4C8B-B096-D9F606A98F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33AFE967-2E80-4C8B-B096-D9F606A98F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33AFE967-2E80-4C8B-B096-D9F606A98F9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2EDD78FE-FB67-4B87-9822-D41C6999FBBB} = {DA25A96C-D995-4C11-8273-70EF4B2E37BB}
+		{33AFE967-2E80-4C8B-B096-D9F606A98F9A} = {DA25A96C-D995-4C11-8273-70EF4B2E37BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B90C4898-FE73-4FD0-9004-29BB08E5C9DD}
