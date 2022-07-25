@@ -21,7 +21,34 @@
 
         public static void SuperSkaiciuotuvas(string ivedimas)
         {
-            if (int.TryParse(ivedimas, out int result));
+            if (int.TryParse(ivedimas, out int result)) ;
+            else
+            {
+                Console.WriteLine("neteisingas  ivedimas");
+                Ivedimas();
+            }
+            switch (result)
+            {
+                case 1: //Nauja Operacija
+                    {
+                        Operacijos();
+                        
+                    }
+                    break;
+
+                    
+
+                    
+                case 2: // iseiti
+                
+                    break;
+            }
+
+        }
+        public static void Tesimas()
+        {
+            Console.WriteLine($"1.Nauja Operacija \n 2.Testi su rezultatu");
+            if (int.TryParse(Ivedimas(), out int result)) ;
             else
             {
                 Console.WriteLine("neteisingas  ivedimas");
@@ -30,26 +57,96 @@
             switch (result)
             {
                 case 1:
-                    Console.WriteLine("1 Sudetis \n 2aimis ");
-                    
-                    if (int.TryParse(Ivedimas(), out int result2)) ;
-                    else
-                    {
-                        Console.WriteLine("neteisingas  ivedimas");
-                        Ivedimas();
-                    }
-                    switch (result2)
-                    { 
-                    case 1:
-                            Console.WriteLine(2 +  2);
-                            break;
-                    }
-
+                    Reset();
+                    Operacijos();
                     break;
                 case 2:
+                    OperacijosTesiant();
                     break;
+                case 3:
+                    break;
+            
+            
             }
 
+
+        }
+
+        public static void Operacijos()
+        {
+            Console.WriteLine("1 Sudetis \n 2aimis ");
+
+            if (int.TryParse(Ivedimas(), out int result2))
+                switch (result2)
+                {
+                    case 1: //Sudetis
+                        {
+                            Console.WriteLine("Iveskite pirma skaiciu");
+                            double.TryParse(Ivedimas(), out double atimtis);
+                            Console.WriteLine("Iveskite antra skaiciu");
+                            double.TryParse(Ivedimas(), out double atimtis2);
+                            rezultatas = atimtis + atimtis2;
+
+                            Console.WriteLine(rezultatas);
+                            Tesimas();
+                            break;
+                        }
+                    case 2: // atimtis
+                        {
+                            Console.WriteLine("Iveskite pirma skaiciu");
+                            double.TryParse(Ivedimas(), out double atimtis);
+                            Console.WriteLine("Iveskite antra skaiciu");
+                            double.TryParse(Ivedimas(), out double atimtis2);
+                            rezultatas = atimtis - atimtis2;
+
+                            Console.WriteLine(rezultatas);
+                            Tesimas();
+                            break;
+                        }
+                }
+
+            else
+            {
+                Console.WriteLine("neteisingas  ivedimas");
+                Ivedimas();
+            }
+        }
+        private static void OperacijosTesiant()
+        {
+            Console.WriteLine("1 Sudetis \n 2aimis ");
+
+            if (int.TryParse(Ivedimas(), out int result2))
+                switch (result2)
+                {
+                    case 1: //Sudetis
+                        {
+                            
+                            Console.WriteLine("Iveskite antra skaiciu");
+                            double.TryParse(Ivedimas(), out double atimtis2);
+                            rezultatas = rezultatas + atimtis2;
+
+                            Console.WriteLine(rezultatas);
+                            Tesimas();
+                            break;
+                        }
+                    case 2: // atimtis
+                        {
+                           
+                            Console.WriteLine("Iveskite antra skaiciu");
+                            double.TryParse(Ivedimas(), out double atimtis2);
+                            rezultatas = rezultatas - atimtis2;
+
+                            Console.WriteLine(rezultatas);
+                            Tesimas();
+                            break;
+                        }
+                }
+
+            else
+            {
+                Console.WriteLine("neteisingas  ivedimas");
+                Ivedimas();
+            }
         }
 
         public static double Rezultatas()
