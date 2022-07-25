@@ -6,9 +6,11 @@
 
         static void Main(string[] args)
         {
-            Console.CursorLeft = Console.WindowWidth / 2;
 
-            SuperSkaiciuotuvas();
+            Console.WriteLine(@"
+            [1] Nauja Operacija
+            [2] Išeiti");
+            SuperSkaiciuotuvas(Ivedimas());
 
 
 
@@ -17,24 +19,32 @@
 
         }
 
+        public static string Ivedimas()
+        {
+            {
+                string? ivedimas = Console.ReadLine();
+                if (ivedimas == null)
+                {
+                    ivedimas = "";
+                }
+                return ivedimas;
 
+            }
+        }
 
-        public static void SuperSkaiciuotuvas()
+        public static void SuperSkaiciuotuvas(string ivedimas)
         {
 
             bool showMenu = true;
             while (showMenu == true)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(@"
-            [1] Nauja Operacija
-            [2] Testi su rezultatu
-            [3] Išeiti");
+               
+          
 
-                switch (Console.ReadLine())
+                switch (ivedimas)
                 {
                     case "1":
-                        Operacijos();
+                        Operacijos(Ivedimas());
                         showMenu = true;
                         break;
                     case "2":
@@ -44,7 +54,7 @@
                             showMenu = true;
                             break;
                         }
-                        Operacijos2();
+                        Operacijos2(Ivedimas());
                         break;
 
                     case "3":
@@ -52,10 +62,7 @@
                         break;
                     default:
                         {
-                            //////////////////////////////////////////////////
-                            Console.Clear();/////////////////////////////////
-                            Console.ForegroundColor = ConsoleColor.Red;/////
-                            ///////////////////////////////////////////////
+                          
                             Console.WriteLine("            Negalimas pasirinkimas!");
                             showMenu = true;
                             break;
@@ -67,15 +74,15 @@
             }
         }
 
-        public static void Operacijos2()
+        public static void Operacijos2(string ivedimas)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
             [4] Dalyba");
-            Console.CursorLeft = Console.WindowWidth / 2;
+           
             switch (Console.ReadLine())
             {
                 case "1":
@@ -117,16 +124,16 @@
             }
         }
 
-        public static void Operacijos()
+        public static void Operacijos(string ivedimas)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
             [4] Dalyba");
-            Console.CursorLeft = Console.WindowWidth / 2;
-            switch (Console.ReadLine())
+            
+            switch (ivedimas)
             {
                 case "1":
                     {
@@ -177,11 +184,9 @@
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-                /////////////////////////////////////////////////
-                Console.ForegroundColor = ConsoleColor.Red;/////
-                                                           //////////////////////////////////////////////// 
+              
                 Console.WriteLine("Negalima ivestis");
-                Operacijos();
+                Operacijos(Ivedimas());
             }
 
             return result;
@@ -194,11 +199,9 @@
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-                /////////////////////////////////////////////////
-                Console.ForegroundColor = ConsoleColor.Red;/////
-                                                           //////////////////////////////////////////////// 
+            
                 Console.WriteLine("Negalima ivestis");
-                Operacijos();
+                Operacijos(Ivedimas());
             }
             return result;
         }
