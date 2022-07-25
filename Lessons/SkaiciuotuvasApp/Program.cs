@@ -16,39 +16,65 @@
 
         public static string Ivedimas()
         {
-            return Console.ReadLine();
+            string? ivedimas = Console.ReadLine();
+            if (ivedimas == null)
+            {
+                ivedimas = "";
+            }
+            return ivedimas;
+            
         }
 
         public static void SuperSkaiciuotuvas(string ivedimas)
         {
-            if (int.TryParse(ivedimas, out int result)) ;
+            if (int.TryParse(ivedimas, out int result))
+            {
+                switch (result)
+                {
+                    case 1: //Nauja Operacija
+                        {
+                            Operacijos();
+
+                        }
+                        break;
+
+
+
+
+                    case 2: // iseiti
+
+                        break;
+                }
+            }
             else
             {
                 Console.WriteLine("neteisingas  ivedimas");
                 Ivedimas();
             }
-            switch (result)
-            {
-                case 1: //Nauja Operacija
-                    {
-                        Operacijos();
-                        
-                    }
-                    break;
-
-                    
-
-                    
-                case 2: // iseiti
-                
-                    break;
-            }
+          
 
         }
         public static void Tesimas()
         {
-            Console.WriteLine($"1.Nauja Operacija \n 2.Testi su rezultatu");
-            if (int.TryParse(Ivedimas(), out int result)) ;
+            Console.WriteLine($"1.Nauja Operacija \n 2.Testi su rezultatu \n 3.Iseiti");
+            if (int.TryParse(Ivedimas(), out int result))
+            {
+                switch (result)
+                {
+                    case 1:
+                        Reset();
+                        Operacijos();
+                        break;
+                    case 2:
+                        OperacijosTesiant();
+                        break;
+                    case 3:
+                        break;
+
+
+                }
+
+            }
             else
             {
                 Console.WriteLine("neteisingas  ivedimas");
