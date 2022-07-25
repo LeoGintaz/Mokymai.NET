@@ -1,4 +1,4 @@
-﻿namespace SuperSkaiciuotuvas
+﻿namespace SkaiciuotuvasApp
 {
     public class Program
     {

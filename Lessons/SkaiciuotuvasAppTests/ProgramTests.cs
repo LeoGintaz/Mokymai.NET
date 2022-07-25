@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SuperSkaiciuotuvas;
+using SkaiciuotuvasApp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +23,7 @@ namespace SuperSkaiciuotuvas.Tests
                 {
                     Program.SuperSkaiciuotuvas(move);
                 }
-                var actual = SuperSkaiciuotuvas.Program.Rezultatas();
+                var actual = SkaiciuotuvasApp.Program.Rezultatas();
 
                 Assert.AreEqual(expected, actual);
             }
