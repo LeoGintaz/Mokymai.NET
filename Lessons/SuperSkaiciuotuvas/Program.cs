@@ -1,4 +1,6 @@
-﻿namespace SuperSkaiciuotuvas
+﻿
+namespace SuperSkaiciuotuvas
+    
 {
     public class Program
     {
@@ -7,10 +9,22 @@
         static void Main(string[] args)
         {
 
+            var fake_moves = new string[] { "1", "1", "15", "45", "2", "2", "10", "3" };
+            var expected = 50d;
+
+            Program.Reset();
+            foreach (var move in fake_moves)
+            {
+                Program.SuperSkaiciuotuvas(move);
+            }
+            var actual = Rezultatas();
+
+           SuperSkaiciuotuvas().
+
             Console.WriteLine(@"
             [1] Nauja Operacija
             [2] Išeiti");
-            SuperSkaiciuotuvas(Ivedimas());
+            //SuperSkaiciuotuvas(Ivedimas());
 
 
 
@@ -38,13 +52,13 @@
             bool showMenu = true;
             while (showMenu == true)
             {
-               
-          
+
+
 
                 switch (ivedimas)
                 {
                     case "1":
-                        Operacijos(Ivedimas());
+                        Operacijos(ivedimas);
                         showMenu = true;
                         break;
                     case "2":
@@ -54,7 +68,7 @@
                             showMenu = true;
                             break;
                         }
-                        Operacijos2(Ivedimas());
+                        Operacijos2(ivedimas);
                         break;
 
                     case "3":
@@ -62,7 +76,7 @@
                         break;
                     default:
                         {
-                          
+
                             Console.WriteLine("            Negalimas pasirinkimas!");
                             showMenu = true;
                             break;
@@ -76,14 +90,14 @@
 
         public static void Operacijos2(string ivedimas)
         {
-            
+
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
             [4] Dalyba");
-           
-            switch (Console.ReadLine())
+
+            switch (ivedimas)
             {
                 case "1":
                     {
@@ -126,19 +140,19 @@
 
         public static void Operacijos(string ivedimas)
         {
-            
+
             Console.WriteLine(@"
             [1] Sudėtis
             [2] Atimtis
             [3] Daugyba
             [4] Dalyba");
-            
+
             switch (ivedimas)
             {
                 case "1":
                     {
 
-                        rezultatas = Ivestis() + Ivestis2();
+                        rezultatas = SuperSkaiciuotuvas(Ivestis()) + SuperSkaiciuotuvas(Ivestis());
                         Console.WriteLine(rezultatas);
                         break;
 
@@ -184,7 +198,7 @@
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-              
+
                 Console.WriteLine("Negalima ivestis");
                 Operacijos(Ivedimas());
             }
@@ -199,7 +213,7 @@
             var input = double.TryParse(Console.ReadLine(), out double result);
             if (input == false)
             {
-            
+
                 Console.WriteLine("Negalima ivestis");
                 Operacijos(Ivedimas());
             }

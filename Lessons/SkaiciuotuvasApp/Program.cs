@@ -5,7 +5,10 @@
         static double? rezultatas = null;
 
         static void Main(string[] args)
+
         {
+            Console.ReadKey();
+
             //  var fake_moves = new string[] { "1", "1", "15", "45", "2", "2", "10", "3" };
             Console.WriteLine(@"
             [1] Nauja Operacija
