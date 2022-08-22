@@ -10,13 +10,18 @@ namespace OOP2
     internal class Human
     {
         //member : var
-        public string firtname;
-        public string lastname = "Doe";
+        public string firstName;
+        public string lastName = "Doe";
+
+        
+       
 
         //member method
         public void IntroduceMyself()
         {
-            Console.WriteLine("Hi, I'm {0} {1}",firtname, lastname);
+            Console.WriteLine("Hi, I'm {0} {1}",firstName, lastName);
         }
     }
+    
 }
+
