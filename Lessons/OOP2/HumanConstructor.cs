@@ -13,7 +13,12 @@ namespace OOP2
         private string eyeColor;
         private int age;
 
-        //Constructor
+        //default Constructorr
+        public HumanConstructor()
+        {
+            Console.WriteLine("constructor called. Object created");
+        }
+        //parameterized Constructor
         public HumanConstructor(string firstName, string lastName, string eyeColor,int age)
         {
             this.firstName = firstName;
